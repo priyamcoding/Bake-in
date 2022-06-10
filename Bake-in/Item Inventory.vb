@@ -163,4 +163,9 @@ Public Class Item_inventory
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         Itemsearch.Show()
     End Sub
+
+    Private Sub btn_exit_Click(sender As Object, e As EventArgs) Handles btn_exit.Click
+        Me.Close()
+        Dashboard.Show()
+    End Sub
 End Class

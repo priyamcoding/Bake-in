@@ -79,9 +79,11 @@ Partial Class compreport
         Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvcomp)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "compreport"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "compreport"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvcomp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -29,8 +29,12 @@ Partial Class Login
         Me.btnlogin = New System.Windows.Forms.Button()
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -39,18 +43,18 @@ Partial Class Login
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
-        Me.Label2.Location = New System.Drawing.Point(132, 142)
+        Me.Label2.Location = New System.Drawing.Point(169, 137)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(292, 23)
+        Me.Label2.Size = New System.Drawing.Size(277, 23)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Enter your Login and Password!"
+        Me.Label2.Text = "Enter your Credentials here!!!!"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(148, 199)
+        Me.Label3.Location = New System.Drawing.Point(220, 191)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(59, 19)
         Me.Label3.TabIndex = 2
@@ -61,7 +65,7 @@ Partial Class Login
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(148, 229)
+        Me.Label4.Location = New System.Drawing.Point(220, 233)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(80, 19)
         Me.Label4.TabIndex = 3
@@ -71,7 +75,7 @@ Partial Class Login
         '
         Me.btnlogin.BackColor = System.Drawing.Color.RosyBrown
         Me.btnlogin.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnlogin.Location = New System.Drawing.Point(136, 315)
+        Me.btnlogin.Location = New System.Drawing.Point(173, 304)
         Me.btnlogin.Name = "btnlogin"
         Me.btnlogin.Size = New System.Drawing.Size(282, 42)
         Me.btnlogin.TabIndex = 5
@@ -81,7 +85,7 @@ Partial Class Login
         'txtUser
         '
         Me.txtUser.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtUser.Location = New System.Drawing.Point(262, 192)
+        Me.txtUser.Location = New System.Drawing.Point(334, 188)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(121, 22)
         Me.txtUser.TabIndex = 6
@@ -89,33 +93,55 @@ Partial Class Login
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtPass.Location = New System.Drawing.Point(262, 229)
+        Me.txtPass.Location = New System.Drawing.Point(334, 233)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(121, 22)
         Me.txtPass.TabIndex = 8
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox1.Font = New System.Drawing.Font("Ink Free", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(91, 274)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(146, 24)
-        Me.CheckBox1.TabIndex = 9
-        Me.CheckBox1.Text = "Show Password"
-        Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Ink Free", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(269, 274)
+        Me.Label5.Location = New System.Drawing.Point(229, 358)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(149, 20)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Forgot Password?"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox1.Font = New System.Drawing.Font("Ink Free", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(173, 274)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(146, 24)
+        Me.CheckBox1.TabIndex = 11
+        Me.CheckBox1.Text = "Show Password"
+        Me.CheckBox1.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(175, 188)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(29, 26)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(173, 226)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(29, 26)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 13
+        Me.PictureBox2.TabStop = False
         '
         'Login
         '
@@ -124,8 +150,10 @@ Partial Class Login
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(911, 485)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.btnlogin)
@@ -133,9 +161,12 @@ Partial Class Login
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -146,6 +177,8 @@ Partial Class Login
     Friend WithEvents btnlogin As Button
     Friend WithEvents txtUser As TextBox
     Friend WithEvents txtPass As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

@@ -24,8 +24,6 @@ Public Class Changing_Password
 
             MessageBox.Show("all information required")
 
-            'ElseIf (txtnewpswd1.Text <> txtconfirmpswd.Text) Then
-            '    MessageBox.Show("invalid")
 
         ElseIf (txtNewPass.Text <> txtRepNewPass.Text) Then
 
@@ -33,32 +31,21 @@ Public Class Changing_Password
 
         Else
 
-            'ssql = "update tbemp set empname='" & txtempname.Text & "' ,  " & "empsal=" & txtempsal.Text & " where empcode=" & txtempcode.Text
-
-            '!!!!!!!!!!!!!!!!!!working statement is below !!!!!!!!!1
-            'sql1 = "update tb_login set password1=" & txtNewPass.Text & " where userID='" & userid.Text & "'"
-
             'new statement - trying 
             sql1 = "update tb_login set password1=" & txtNewPass.Text & " , secans = '" & txtSecAns.Text & "' where userID='" & userid.Text & "'"
             'end of new statement 
 
-            MessageBox.Show(sql1)
+            'MessageBox.Show(sql1)
             cmd = New OleDbCommand(sql1, dbcon)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("record update")
+            MsgBox("Record Updated successfully!!!", MessageBoxIcon.Information)
         End If
     End Sub
 
     Private Sub changepassword_Closed(sender As Object, e As EventArgs) Handles Me.Closed
 
-        'If dbcon.State = ConnectionState.Open Then
-        '    MessageBox.Show("open")
-        'Else
-        '    MessageBox.Show("closed")
-        'End If
-        'dbcon.Close()
-        'MsgBox("closed")
+
     End Sub
 
     Private Sub btn_exit_Click(sender As Object, e As EventArgs) Handles btn_exit.Click
@@ -67,11 +54,5 @@ Public Class Changing_Password
     End Sub
 
 
-    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-    '    Me.Close()
-    'End Sub
 
-    'Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    'End Sub
 End Class

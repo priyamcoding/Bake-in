@@ -22,6 +22,7 @@ Partial Class salesreport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(salesreport))
         Me.dgvsales = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_print = New System.Windows.Forms.Button()
@@ -43,7 +44,7 @@ Partial Class salesreport
         Me.dgvsales.Name = "dgvsales"
         Me.dgvsales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvsales.RowTemplate.Height = 25
-        Me.dgvsales.Size = New System.Drawing.Size(661, 315)
+        Me.dgvsales.Size = New System.Drawing.Size(536, 236)
         Me.dgvsales.TabIndex = 0
         '
         'Label1
@@ -62,9 +63,9 @@ Partial Class salesreport
         '
         Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(229, 397)
+        Me.btn_print.Location = New System.Drawing.Point(275, 338)
         Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(194, 41)
+        Me.btn_print.Size = New System.Drawing.Size(122, 35)
         Me.btn_print.TabIndex = 2
         Me.btn_print.Text = "Print"
         Me.btn_print.UseVisualStyleBackColor = False
@@ -73,7 +74,7 @@ Partial Class salesreport
         '
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_exit.Location = New System.Drawing.Point(450, 397)
+        Me.btn_exit.Location = New System.Drawing.Point(403, 338)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(135, 35)
         Me.btn_exit.TabIndex = 7
@@ -84,14 +85,17 @@ Partial Class salesreport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvsales)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "salesreport"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvsales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -189,6 +189,12 @@
     <Compile Include="bakein_menu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="prodrep.Designer.vb">
+      <DependentUpon>prodrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prodrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="prod_search.Designer.vb">
       <DependentUpon>prod_search.vb</DependentUpon>
     </Compile>
@@ -263,10 +269,16 @@
     <Compile Include="Splash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Waste Management.Designer.vb">
-      <DependentUpon>Waste Management.vb</DependentUpon>
+    <Compile Include="Splash2.Designer.vb">
+      <DependentUpon>Splash2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Waste Management.vb">
+    <Compile Include="Splash2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="waste2.Designer.vb">
+      <DependentUpon>waste2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="waste2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="wastereport.Designer.vb">
@@ -340,6 +352,9 @@
     <EmbeddedResource Include="Order Management.resx">
       <DependentUpon>Order Management.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="prodrep.resx">
+      <DependentUpon>prodrep.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product Inventory.resx">
       <DependentUpon>Product Inventory.vb</DependentUpon>
     </EmbeddedResource>
@@ -355,8 +370,11 @@
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Waste Management.resx">
-      <DependentUpon>Waste Management.vb</DependentUpon>
+    <EmbeddedResource Include="Splash2.resx">
+      <DependentUpon>Splash2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="waste2.resx">
+      <DependentUpon>waste2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="wastereport.resx">
       <DependentUpon>wastereport.vb</DependentUpon>
@@ -413,6 +431,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\priyamprojectbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

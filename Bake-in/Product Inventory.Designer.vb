@@ -28,12 +28,10 @@ Partial Class Product_Inventory
         Me.btn_insert = New System.Windows.Forms.Button()
         Me.cmbCategory = New System.Windows.Forms.ComboBox()
         Me.txtLisPrc = New System.Windows.Forms.TextBox()
-        Me.txtProdID = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbOrd = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.rbRef_no = New System.Windows.Forms.RadioButton()
@@ -50,6 +48,8 @@ Partial Class Product_Inventory
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
         Me.btn_update = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtProdID = New System.Windows.Forms.TextBox()
         CType(Me.dgvpro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -108,14 +108,6 @@ Partial Class Product_Inventory
         Me.txtLisPrc.Size = New System.Drawing.Size(145, 22)
         Me.txtLisPrc.TabIndex = 53
         '
-        'txtProdID
-        '
-        Me.txtProdID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtProdID.Location = New System.Drawing.Point(293, 102)
-        Me.txtProdID.Name = "txtProdID"
-        Me.txtProdID.Size = New System.Drawing.Size(145, 22)
-        Me.txtProdID.TabIndex = 51
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -163,18 +155,6 @@ Partial Class Product_Inventory
         Me.Label3.Size = New System.Drawing.Size(93, 16)
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "Listing Price :"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Sienna
-        Me.Label1.Location = New System.Drawing.Point(107, 106)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 16)
-        Me.Label1.TabIndex = 43
-        Me.Label1.Text = "Product ID :"
         '
         'cmbOrd
         '
@@ -362,6 +342,27 @@ Partial Class Product_Inventory
         Me.btn_update.Text = "Update"
         Me.btn_update.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Sienna
+        Me.Label1.Location = New System.Drawing.Point(107, 106)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(82, 16)
+        Me.Label1.TabIndex = 43
+        Me.Label1.Text = "Product ID :"
+        '
+        'txtProdID
+        '
+        Me.txtProdID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.txtProdID.Location = New System.Drawing.Point(293, 102)
+        Me.txtProdID.Name = "txtProdID"
+        Me.txtProdID.ReadOnly = True
+        Me.txtProdID.Size = New System.Drawing.Size(145, 22)
+        Me.txtProdID.TabIndex = 51
+        '
         'Product_Inventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -396,9 +397,11 @@ Partial Class Product_Inventory
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Product_Inventory"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Product_Management"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvpro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -410,12 +413,10 @@ Partial Class Product_Inventory
     Friend WithEvents btn_insert As Button
     Friend WithEvents cmbCategory As ComboBox
     Friend WithEvents txtLisPrc As TextBox
-    Friend WithEvents txtProdID As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents cmbOrd As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents rbRef_no As RadioButton
@@ -432,4 +433,6 @@ Partial Class Product_Inventory
     Friend WithEvents btn_exit As Button
     Friend WithEvents btn_search As Button
     Friend WithEvents btn_update As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtProdID As TextBox
 End Class

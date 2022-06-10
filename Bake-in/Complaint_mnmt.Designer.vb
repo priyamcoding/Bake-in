@@ -327,7 +327,7 @@ Partial Class Complaint_mnmt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1097, 581)
+        Me.ClientSize = New System.Drawing.Size(1009, 505)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_search)
         Me.Controls.Add(Me.dgvComp2)
@@ -352,9 +352,10 @@ Partial Class Complaint_mnmt
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Complaint_mnmt"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvComp1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvComp2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

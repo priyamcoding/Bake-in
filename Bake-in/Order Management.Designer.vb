@@ -22,6 +22,7 @@ Partial Class Order_Management
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Order_Management))
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -40,11 +41,8 @@ Partial Class Order_Management
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.dtpDOP = New System.Windows.Forms.DateTimePicker()
-        Me.txtOrdID = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.dgvOrder = New System.Windows.Forms.DataGridView()
         Me.btn_delete = New System.Windows.Forms.Button()
-        Me.btn_update = New System.Windows.Forms.Button()
         Me.gp1 = New System.Windows.Forms.GroupBox()
         Me.rbPayRecNo = New System.Windows.Forms.RadioButton()
         Me.rbPayRecYes = New System.Windows.Forms.RadioButton()
@@ -58,6 +56,8 @@ Partial Class Order_Management
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btn_showinv = New System.Windows.Forms.Button()
         Me.btn_exit = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtOrdID = New System.Windows.Forms.TextBox()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gp1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -70,7 +70,7 @@ Partial Class Order_Management
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Sienna
-        Me.Label7.Location = New System.Drawing.Point(38, 305)
+        Me.Label7.Location = New System.Drawing.Point(38, 295)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(111, 16)
@@ -83,7 +83,7 @@ Partial Class Order_Management
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Sienna
-        Me.Label9.Location = New System.Drawing.Point(40, 241)
+        Me.Label9.Location = New System.Drawing.Point(40, 231)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 16)
@@ -134,7 +134,7 @@ Partial Class Order_Management
         Me.cmbGen.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.cmbGen.FormattingEnabled = True
         Me.cmbGen.Items.AddRange(New Object() {"Female", "Male", "Choose not to answer"})
-        Me.cmbGen.Location = New System.Drawing.Point(202, 239)
+        Me.cmbGen.Location = New System.Drawing.Point(202, 229)
         Me.cmbGen.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbGen.Name = "cmbGen"
         Me.cmbGen.Size = New System.Drawing.Size(129, 25)
@@ -153,7 +153,7 @@ Partial Class Order_Management
         'txtPhone
         '
         Me.txtPhone.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtPhone.Location = New System.Drawing.Point(202, 305)
+        Me.txtPhone.Location = New System.Drawing.Point(202, 295)
         Me.txtPhone.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(129, 22)
@@ -162,7 +162,7 @@ Partial Class Order_Management
         'txtNam
         '
         Me.txtNam.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtNam.Location = New System.Drawing.Point(202, 210)
+        Me.txtNam.Location = New System.Drawing.Point(202, 200)
         Me.txtNam.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNam.Name = "txtNam"
         Me.txtNam.Size = New System.Drawing.Size(129, 22)
@@ -174,7 +174,7 @@ Partial Class Order_Management
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.Sienna
-        Me.Label5.Location = New System.Drawing.Point(40, 273)
+        Me.Label5.Location = New System.Drawing.Point(40, 263)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(95, 16)
@@ -187,7 +187,7 @@ Partial Class Order_Management
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Sienna
-        Me.Label4.Location = New System.Drawing.Point(40, 211)
+        Me.Label4.Location = New System.Drawing.Point(40, 201)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(120, 16)
@@ -200,7 +200,7 @@ Partial Class Order_Management
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Sienna
-        Me.Label3.Location = New System.Drawing.Point(40, 140)
+        Me.Label3.Location = New System.Drawing.Point(40, 134)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(90, 16)
@@ -223,7 +223,7 @@ Partial Class Order_Management
         'txtCustID
         '
         Me.txtCustID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtCustID.Location = New System.Drawing.Point(202, 140)
+        Me.txtCustID.Location = New System.Drawing.Point(202, 134)
         Me.txtCustID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCustID.Name = "txtCustID"
         Me.txtCustID.Size = New System.Drawing.Size(129, 22)
@@ -232,7 +232,7 @@ Partial Class Order_Management
         'dtpDOB
         '
         Me.dtpDOB.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.dtpDOB.Location = New System.Drawing.Point(202, 267)
+        Me.dtpDOB.Location = New System.Drawing.Point(202, 257)
         Me.dtpDOB.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpDOB.Name = "dtpDOB"
         Me.dtpDOB.Size = New System.Drawing.Size(129, 22)
@@ -256,7 +256,7 @@ Partial Class Order_Management
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.Sienna
-        Me.Label12.Location = New System.Drawing.Point(40, 181)
+        Me.Label12.Location = New System.Drawing.Point(40, 171)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(127, 16)
@@ -266,33 +266,11 @@ Partial Class Order_Management
         'dtpDOP
         '
         Me.dtpDOP.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.dtpDOP.Location = New System.Drawing.Point(202, 174)
+        Me.dtpDOP.Location = New System.Drawing.Point(202, 164)
         Me.dtpDOP.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpDOP.Name = "dtpDOP"
         Me.dtpDOP.Size = New System.Drawing.Size(129, 22)
         Me.dtpDOP.TabIndex = 75
-        '
-        'txtOrdID
-        '
-        Me.txtOrdID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtOrdID.Location = New System.Drawing.Point(202, 99)
-        Me.txtOrdID.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtOrdID.Name = "txtOrdID"
-        Me.txtOrdID.Size = New System.Drawing.Size(129, 22)
-        Me.txtOrdID.TabIndex = 80
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label14.ForeColor = System.Drawing.Color.Sienna
-        Me.Label14.Location = New System.Drawing.Point(40, 103)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(71, 16)
-        Me.Label14.TabIndex = 79
-        Me.Label14.Text = "Order ID :"
         '
         'dgvOrder
         '
@@ -309,7 +287,7 @@ Partial Class Order_Management
         Me.dgvOrder.ReadOnly = True
         Me.dgvOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvOrder.RowTemplate.Height = 25
-        Me.dgvOrder.Size = New System.Drawing.Size(795, 124)
+        Me.dgvOrder.Size = New System.Drawing.Size(732, 124)
         Me.dgvOrder.TabIndex = 81
         '
         'btn_delete
@@ -324,19 +302,6 @@ Partial Class Order_Management
         Me.btn_delete.TabIndex = 82
         Me.btn_delete.Text = "Delete"
         Me.btn_delete.UseVisualStyleBackColor = False
-        '
-        'btn_update
-        '
-        Me.btn_update.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_update.ForeColor = System.Drawing.Color.Black
-        Me.btn_update.Location = New System.Drawing.Point(757, 189)
-        Me.btn_update.Margin = New System.Windows.Forms.Padding(2)
-        Me.btn_update.Name = "btn_update"
-        Me.btn_update.Size = New System.Drawing.Size(145, 41)
-        Me.btn_update.TabIndex = 83
-        Me.btn_update.Text = "Update"
-        Me.btn_update.UseVisualStyleBackColor = False
         '
         'gp1
         '
@@ -481,7 +446,7 @@ Partial Class Order_Management
         '
         Me.btn_showinv.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_showinv.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_showinv.Location = New System.Drawing.Point(757, 245)
+        Me.btn_showinv.Location = New System.Drawing.Point(757, 198)
         Me.btn_showinv.Name = "btn_showinv"
         Me.btn_showinv.Size = New System.Drawing.Size(145, 59)
         Me.btn_showinv.TabIndex = 90
@@ -493,7 +458,7 @@ Partial Class Order_Management
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(782, 309)
+        Me.btn_exit.Location = New System.Drawing.Point(782, 262)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -501,10 +466,35 @@ Partial Class Order_Management
         Me.btn_exit.Text = "Exit"
         Me.btn_exit.UseVisualStyleBackColor = False
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label14.ForeColor = System.Drawing.Color.Sienna
+        Me.Label14.Location = New System.Drawing.Point(40, 103)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(71, 16)
+        Me.Label14.TabIndex = 79
+        Me.Label14.Text = "Order ID :"
+        '
+        'txtOrdID
+        '
+        Me.txtOrdID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.txtOrdID.Location = New System.Drawing.Point(202, 99)
+        Me.txtOrdID.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtOrdID.Name = "txtOrdID"
+        Me.txtOrdID.ReadOnly = True
+        Me.txtOrdID.Size = New System.Drawing.Size(129, 22)
+        Me.txtOrdID.TabIndex = 80
+        '
         'Order_Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(947, 527)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_showinv)
@@ -513,7 +503,6 @@ Partial Class Order_Management
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.gp1)
-        Me.Controls.Add(Me.btn_update)
         Me.Controls.Add(Me.btn_delete)
         Me.Controls.Add(Me.dgvOrder)
         Me.Controls.Add(Me.txtOrdID)
@@ -536,9 +525,11 @@ Partial Class Order_Management
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Order_Management"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Order_Management"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gp1.ResumeLayout(False)
         Me.gp1.PerformLayout()
@@ -568,11 +559,8 @@ Partial Class Order_Management
     Friend WithEvents Label8 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents dtpDOP As DateTimePicker
-    Friend WithEvents txtOrdID As TextBox
-    Friend WithEvents Label14 As Label
     Friend WithEvents dgvOrder As DataGridView
     Friend WithEvents btn_delete As Button
-    Friend WithEvents btn_update As Button
     Friend WithEvents gp1 As GroupBox
     Friend WithEvents rbPayRecNo As RadioButton
     Friend WithEvents rbPayRecYes As RadioButton
@@ -586,4 +574,6 @@ Partial Class Order_Management
     Friend WithEvents Label11 As Label
     Friend WithEvents btn_showinv As Button
     Friend WithEvents btn_exit As Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents txtOrdID As TextBox
 End Class

@@ -46,6 +46,7 @@ Partial Class sales_invoice
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.dgv_prod = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dgv_invoice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_prod, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,18 +57,20 @@ Partial Class sales_invoice
         Me.dgv_invoice.AllowUserToDeleteRows = False
         Me.dgv_invoice.AllowUserToResizeColumns = False
         Me.dgv_invoice.AllowUserToResizeRows = False
-        Me.dgv_invoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_invoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgv_invoice.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_invoice.BackgroundColor = System.Drawing.Color.LavenderBlush
         Me.dgv_invoice.ColumnHeadersHeight = 30
         Me.dgv_invoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv_invoice.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+        Me.dgv_invoice.EnableHeadersVisualStyles = False
         Me.dgv_invoice.GridColor = System.Drawing.Color.Gray
-        Me.dgv_invoice.Location = New System.Drawing.Point(82, 131)
+        Me.dgv_invoice.Location = New System.Drawing.Point(174, 131)
         Me.dgv_invoice.MultiSelect = False
         Me.dgv_invoice.Name = "dgv_invoice"
         Me.dgv_invoice.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgv_invoice.RowTemplate.Height = 25
-        Me.dgv_invoice.Size = New System.Drawing.Size(470, 295)
+        Me.dgv_invoice.Size = New System.Drawing.Size(322, 313)
         Me.dgv_invoice.TabIndex = 0
         '
         'Column1
@@ -79,16 +82,19 @@ Partial Class sales_invoice
         '
         Me.Column2.HeaderText = "Qty "
         Me.Column2.Name = "Column2"
+        Me.Column2.Width = 48
         '
         'Column3
         '
         Me.Column3.HeaderText = "Price"
         Me.Column3.Name = "Column3"
+        Me.Column3.Width = 56
         '
         'Column4
         '
         Me.Column4.HeaderText = "Sum"
         Me.Column4.Name = "Column4"
+        Me.Column4.Width = 53
         '
         'Label1
         '
@@ -96,7 +102,7 @@ Partial Class sales_invoice
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.Sienna
-        Me.Label1.Location = New System.Drawing.Point(171, 83)
+        Me.Label1.Location = New System.Drawing.Point(148, 80)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 16)
         Me.Label1.TabIndex = 1
@@ -106,7 +112,7 @@ Partial Class sales_invoice
         '
         Me.btn_add.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_add.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_add.Location = New System.Drawing.Point(594, 155)
+        Me.btn_add.Location = New System.Drawing.Point(553, 140)
         Me.btn_add.Name = "btn_add"
         Me.btn_add.Size = New System.Drawing.Size(105, 36)
         Me.btn_add.TabIndex = 2
@@ -117,7 +123,7 @@ Partial Class sales_invoice
         '
         Me.btn_remline.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_remline.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_remline.Location = New System.Drawing.Point(594, 197)
+        Me.btn_remline.Location = New System.Drawing.Point(553, 182)
         Me.btn_remline.Name = "btn_remline"
         Me.btn_remline.Size = New System.Drawing.Size(105, 36)
         Me.btn_remline.TabIndex = 3
@@ -128,7 +134,7 @@ Partial Class sales_invoice
         '
         Me.btn_ClrAll.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_ClrAll.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_ClrAll.Location = New System.Drawing.Point(594, 239)
+        Me.btn_ClrAll.Location = New System.Drawing.Point(553, 224)
         Me.btn_ClrAll.Name = "btn_ClrAll"
         Me.btn_ClrAll.Size = New System.Drawing.Size(105, 36)
         Me.btn_ClrAll.TabIndex = 4
@@ -139,7 +145,7 @@ Partial Class sales_invoice
         '
         Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(594, 348)
+        Me.btn_print.Location = New System.Drawing.Point(553, 408)
         Me.btn_print.Name = "btn_print"
         Me.btn_print.Size = New System.Drawing.Size(105, 36)
         Me.btn_print.TabIndex = 5
@@ -149,9 +155,10 @@ Partial Class sales_invoice
         'txtPrice
         '
         Me.txtPrice.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtPrice.Location = New System.Drawing.Point(687, 82)
+        Me.txtPrice.Location = New System.Drawing.Point(664, 77)
+        Me.txtPrice.Multiline = True
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(100, 22)
+        Me.txtPrice.Size = New System.Drawing.Size(100, 25)
         Me.txtPrice.TabIndex = 7
         '
         'Label2
@@ -159,7 +166,7 @@ Partial Class sales_invoice
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
-        Me.Label2.Location = New System.Drawing.Point(631, 85)
+        Me.Label2.Location = New System.Drawing.Point(618, 80)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 16)
         Me.Label2.TabIndex = 8
@@ -172,7 +179,7 @@ Partial Class sales_invoice
         Me.invoice_heading.ForeColor = System.Drawing.Color.Maroon
         Me.invoice_heading.Location = New System.Drawing.Point(0, 0)
         Me.invoice_heading.Name = "invoice_heading"
-        Me.invoice_heading.Size = New System.Drawing.Size(1115, 69)
+        Me.invoice_heading.Size = New System.Drawing.Size(1135, 69)
         Me.invoice_heading.TabIndex = 9
         Me.invoice_heading.Text = "BAKE-IN SALES INVOICE"
         Me.invoice_heading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -180,9 +187,10 @@ Partial Class sales_invoice
         'txtQty
         '
         Me.txtQty.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtQty.Location = New System.Drawing.Point(508, 79)
+        Me.txtQty.Location = New System.Drawing.Point(511, 77)
+        Me.txtQty.Multiline = True
         Me.txtQty.Name = "txtQty"
-        Me.txtQty.Size = New System.Drawing.Size(100, 22)
+        Me.txtQty.Size = New System.Drawing.Size(69, 25)
         Me.txtQty.TabIndex = 11
         '
         'Label3
@@ -190,7 +198,7 @@ Partial Class sales_invoice
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Sienna
-        Me.Label3.Location = New System.Drawing.Point(438, 82)
+        Me.Label3.Location = New System.Drawing.Point(432, 80)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 16)
         Me.Label3.TabIndex = 10
@@ -199,7 +207,7 @@ Partial Class sales_invoice
         'txttotal
         '
         Me.txttotal.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txttotal.Location = New System.Drawing.Point(594, 322)
+        Me.txttotal.Location = New System.Drawing.Point(553, 307)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.ReadOnly = True
         Me.txttotal.Size = New System.Drawing.Size(105, 22)
@@ -211,7 +219,7 @@ Partial Class sales_invoice
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Sienna
-        Me.Label4.Location = New System.Drawing.Point(600, 291)
+        Me.Label4.Location = New System.Drawing.Point(559, 276)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(90, 16)
         Me.Label4.TabIndex = 13
@@ -228,18 +236,15 @@ Partial Class sales_invoice
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
-        'PrintDocument1
-        '
-        '
         'cmbName
         '
         Me.cmbName.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.cmbName.FormattingEnabled = True
         Me.cmbName.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.cmbName.Items.AddRange(New Object() {"Blueberry Scones ", "blackforest Pastry ", "Dark Choclate fudge", "Strawberry Cheesecake ", "Apple Pie ", "Olive Multigrain Bread", "Butterscotch Milkshake", "Oreo Milkshake", "Rasberry Cooler ", "Chocolate Chip cookies ", "Macarons (box)"})
-        Me.cmbName.Location = New System.Drawing.Point(277, 80)
+        Me.cmbName.Location = New System.Drawing.Point(254, 77)
         Me.cmbName.Name = "cmbName"
-        Me.cmbName.Size = New System.Drawing.Size(125, 25)
+        Me.cmbName.Size = New System.Drawing.Size(155, 25)
         Me.cmbName.TabIndex = 14
         '
         'btn_exit
@@ -247,7 +252,7 @@ Partial Class sales_invoice
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(902, 454)
+        Me.btn_exit.Location = New System.Drawing.Point(553, 449)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -265,27 +270,44 @@ Partial Class sales_invoice
         Me.dgv_prod.ColumnHeadersHeight = 30
         Me.dgv_prod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv_prod.GridColor = System.Drawing.Color.Gray
-        Me.dgv_prod.Location = New System.Drawing.Point(758, 131)
+        Me.dgv_prod.Location = New System.Drawing.Point(706, 131)
         Me.dgv_prod.Name = "dgv_prod"
         Me.dgv_prod.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgv_prod.RowTemplate.Height = 25
-        Me.dgv_prod.Size = New System.Drawing.Size(249, 295)
+        Me.dgv_prod.Size = New System.Drawing.Size(343, 313)
         Me.dgv_prod.TabIndex = 143
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(861, 115)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.Sienna
+        Me.Label5.Location = New System.Drawing.Point(859, 112)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.Size = New System.Drawing.Size(45, 16)
         Me.Label5.TabIndex = 144
         Me.Label5.Text = "MENU"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.RosyBrown
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Location = New System.Drawing.Point(553, 335)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(105, 58)
+        Me.Button1.TabIndex = 145
+        Me.Button1.Text = "SHOW INVOICE"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'sales_invoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1115, 514)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1135, 528)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.dgv_prod)
         Me.Controls.Add(Me.btn_exit)
@@ -303,10 +325,11 @@ Partial Class sales_invoice
         Me.Controls.Add(Me.btn_add)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgv_invoice)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "sales_invoice"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "sales_invoice"
         Me.TopMost = True
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgv_invoice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgv_prod, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -337,4 +360,5 @@ Partial Class sales_invoice
     Friend WithEvents btn_exit As Button
     Friend WithEvents dgv_prod As DataGridView
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
 End Class

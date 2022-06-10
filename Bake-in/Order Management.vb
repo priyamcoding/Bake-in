@@ -122,55 +122,7 @@ Public Class Order_Management
         sales_invoice.Show()
     End Sub
 
-    Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
 
-        Dim s As Boolean
-        If rbDelNeedYes.Checked = True Then
-
-            s = True
-        ElseIf rbDelNeedNo.Checked = True Then
-            s = False
-
-        End If
-        Dim q As Boolean
-        If rbMOPcod.Checked = True Then
-            q = True
-        ElseIf rbMOPonline.Checked = True Then
-            q = False
-        End If
-        Dim r As Boolean
-        If rbPayRecYes.Checked = True Then
-            'MessageBox.Show("Yes")
-            r = True
-        ElseIf rbPayRecNo.Checked = True Then
-            r = False
-            'MessageBox.Show("No")
-        End If
-
-        If MsgBox("Are you sure you want to update this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Update Document") = DialogResult.Yes Then
-
-            Dim sSql As String = "update tb_order set custID1 = " & Integer.Parse(txtCustID.Text) & ", dop1 = #" & dtpDOP.Value.Date & "#, custname1 = '" & txtNam.Text & "',  gender1 = '" & cmbGen.SelectedItem & "', dob1 = #" & dtpDOB.Value.Date & "#, phno1 = " & Double.Parse(txtPhone.Text) & ", add1 = '" & txtAddress.Text & "', del1 = '" & s & "', mop1 = '" & q & "', payrec1 = '" & r & "' ,  where orderID = " & txtOrdID.Text & " "
-
-            MsgBox(sSql)
-            cmd = New OleDbCommand()
-            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-            cmd.CommandText = sSql
-            cmd.Connection = con
-            If con.State = ConnectionState.Closed Then
-                con.Open()
-            End If
-            cmd.ExecuteNonQuery()
-            daOrd.SelectCommand = New OleDbCommand("select * from tb_order")
-            daOrd.SelectCommand.Connection = con
-            dtOrd.Clear()
-            daOrd.Fill(dtOrd)
-            dgvOrder.DataSource = dtOrd
-
-        End If
-
-        MsgBox("Record updated successfully!!!", MessageBoxIcon.Information)
-        con.Close()
-    End Sub
 
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
         If MsgBox("Are you sure to delete this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Delete Document") = DialogResult.Yes Then

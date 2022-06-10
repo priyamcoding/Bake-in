@@ -29,9 +29,7 @@ Partial Class Item_inventory
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtItemID = New System.Windows.Forms.TextBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.cmbCat = New System.Windows.Forms.ComboBox()
         Me.rbRefNo = New System.Windows.Forms.RadioButton()
@@ -47,6 +45,8 @@ Partial Class Item_inventory
         Me.txtQty = New System.Windows.Forms.TextBox()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtItemID = New System.Windows.Forms.TextBox()
         CType(Me.dgvitem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,7 +68,7 @@ Partial Class Item_inventory
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Sienna
-        Me.Label9.Location = New System.Drawing.Point(175, 200)
+        Me.Label9.Location = New System.Drawing.Point(197, 202)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(72, 16)
         Me.Label9.TabIndex = 29
@@ -80,7 +80,7 @@ Partial Class Item_inventory
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Sienna
-        Me.Label8.Location = New System.Drawing.Point(176, 271)
+        Me.Label8.Location = New System.Drawing.Point(198, 273)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(144, 16)
         Me.Label8.TabIndex = 28
@@ -92,7 +92,7 @@ Partial Class Item_inventory
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Sienna
-        Me.Label7.Location = New System.Drawing.Point(176, 165)
+        Me.Label7.Location = New System.Drawing.Point(198, 167)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(77, 16)
         Me.Label7.TabIndex = 27
@@ -104,7 +104,7 @@ Partial Class Item_inventory
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Sienna
-        Me.Label3.Location = New System.Drawing.Point(177, 237)
+        Me.Label3.Location = New System.Drawing.Point(199, 239)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(48, 16)
         Me.Label3.TabIndex = 26
@@ -116,23 +116,11 @@ Partial Class Item_inventory
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
-        Me.Label2.Location = New System.Drawing.Point(176, 309)
+        Me.Label2.Location = New System.Drawing.Point(198, 311)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 16)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Date of Arrival :"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Sienna
-        Me.Label1.Location = New System.Drawing.Point(176, 97)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 16)
-        Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Item ID :"
         '
         'Label4
         '
@@ -140,19 +128,11 @@ Partial Class Item_inventory
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Sienna
-        Me.Label4.Location = New System.Drawing.Point(177, 343)
+        Me.Label4.Location = New System.Drawing.Point(199, 345)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(115, 16)
         Me.Label4.TabIndex = 30
         Me.Label4.Text = "Expiration Date :"
-        '
-        'txtItemID
-        '
-        Me.txtItemID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtItemID.Location = New System.Drawing.Point(362, 93)
-        Me.txtItemID.Name = "txtItemID"
-        Me.txtItemID.Size = New System.Drawing.Size(145, 22)
-        Me.txtItemID.TabIndex = 32
         '
         'txtPrice
         '
@@ -221,7 +201,7 @@ Partial Class Item_inventory
         Me.btn_reset.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_reset.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_reset.ForeColor = System.Drawing.Color.Black
-        Me.btn_reset.Location = New System.Drawing.Point(287, 391)
+        Me.btn_reset.Location = New System.Drawing.Point(312, 391)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(105, 36)
         Me.btn_reset.TabIndex = 42
@@ -233,7 +213,7 @@ Partial Class Item_inventory
         Me.btn_save.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_save.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_save.ForeColor = System.Drawing.Color.Black
-        Me.btn_save.Location = New System.Drawing.Point(142, 391)
+        Me.btn_save.Location = New System.Drawing.Point(201, 391)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(105, 36)
         Me.btn_save.TabIndex = 41
@@ -263,7 +243,7 @@ Partial Class Item_inventory
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.Sienna
-        Me.Label5.Location = New System.Drawing.Point(176, 130)
+        Me.Label5.Location = New System.Drawing.Point(198, 132)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(77, 16)
         Me.Label5.TabIndex = 31
@@ -281,7 +261,7 @@ Partial Class Item_inventory
         '
         Me.btn_delete.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_delete.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_delete.Location = New System.Drawing.Point(423, 391)
+        Me.btn_delete.Location = New System.Drawing.Point(433, 391)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(105, 36)
         Me.btn_delete.TabIndex = 44
@@ -314,13 +294,34 @@ Partial Class Item_inventory
         Me.btn_search.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_search.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_search.ForeColor = System.Drawing.Color.Black
-        Me.btn_search.Location = New System.Drawing.Point(533, 391)
+        Me.btn_search.Location = New System.Drawing.Point(543, 391)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(105, 36)
         Me.btn_search.TabIndex = 141
         Me.btn_search.Text = "Search"
         Me.btn_search.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Sienna
+        Me.Label1.Location = New System.Drawing.Point(198, 99)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 16)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Item ID :"
+        '
+        'txtItemID
+        '
+        Me.txtItemID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.txtItemID.Location = New System.Drawing.Point(362, 93)
+        Me.txtItemID.Name = "txtItemID"
+        Me.txtItemID.ReadOnly = True
+        Me.txtItemID.Size = New System.Drawing.Size(145, 22)
+        Me.txtItemID.TabIndex = 32
         '
         'Item_inventory
         '
@@ -353,9 +354,11 @@ Partial Class Item_inventory
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Item_inventory"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvitem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -368,9 +371,7 @@ Partial Class Item_inventory
     Friend WithEvents Label7 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtItemID As TextBox
     Friend WithEvents txtPrice As TextBox
     Friend WithEvents cmbCat As ComboBox
     Friend WithEvents rbRefNo As RadioButton
@@ -386,4 +387,6 @@ Partial Class Item_inventory
     Friend WithEvents txtQty As TextBox
     Friend WithEvents btn_exit As Button
     Friend WithEvents btn_search As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtItemID As TextBox
 End Class

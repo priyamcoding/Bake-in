@@ -33,8 +33,8 @@ Public Class Login
         End If
 
         If userfound = True Then
-            Dashboard.Show()
-            Dashboard.Label1.Text = "Welcome" & " " & Firstname1 & " " & Lastname1
+            Splash2.Show()
+            'Dashboard.Label1.Text = "Welcome" & " " & Firstname1 & " " & Lastname1
         Else
             MsgBox("Sorry!!! Credentials do not match.", MsgBoxStyle.OkOnly, "Invalid Login")
 
@@ -56,7 +56,7 @@ Public Class Login
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
         'first make password don't show
         If CheckBox1.CheckState = CheckState.Checked Then
             'IF TRUE, IT SHOWS THE TEXT

@@ -120,9 +120,10 @@ Partial Class Itemsearch
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Itemsearch"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Itemsearch"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvItemSearch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

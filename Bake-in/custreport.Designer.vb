@@ -68,7 +68,7 @@ Partial Class custreport
         Me.dgvcust.Name = "dgvcust"
         Me.dgvcust.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvcust.RowTemplate.Height = 25
-        Me.dgvcust.Size = New System.Drawing.Size(661, 315)
+        Me.dgvcust.Size = New System.Drawing.Size(580, 242)
         Me.dgvcust.TabIndex = 3
         '
         'btn_exit
@@ -95,10 +95,12 @@ Partial Class custreport
         Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvcust)
+        Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Maroon
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "custreport"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "custreport"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvcust, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

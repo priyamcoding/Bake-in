@@ -11,7 +11,7 @@ Public Class waste_search
     Dim dtItem As DataTable
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
-        Waste_Management.Show()
+        waste2.Show()
     End Sub
 
     Private Sub ItemSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load

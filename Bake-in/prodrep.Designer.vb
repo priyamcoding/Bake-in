@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class wastereport
+Partial Class prodrep
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class wastereport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(wastereport))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(prodrep))
         Me.btn_print = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvwaste = New System.Windows.Forms.DataGridView()
@@ -36,10 +36,10 @@ Partial Class wastereport
         '
         Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(217, 335)
+        Me.btn_print.Location = New System.Drawing.Point(298, 334)
         Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(126, 35)
-        Me.btn_print.TabIndex = 5
+        Me.btn_print.Size = New System.Drawing.Size(135, 35)
+        Me.btn_print.TabIndex = 9
         Me.btn_print.Text = "Print"
         Me.btn_print.UseVisualStyleBackColor = False
         '
@@ -49,11 +49,11 @@ Partial Class wastereport
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Bell MT", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(298, 29)
+        Me.Label1.Location = New System.Drawing.Point(292, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(236, 31)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "WASTE REPORT"
+        Me.Label1.Size = New System.Drawing.Size(272, 31)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "PRODUCT REPORT"
         '
         'dgvwaste
         '
@@ -61,17 +61,16 @@ Partial Class wastereport
         Me.dgvwaste.AllowUserToDeleteRows = False
         Me.dgvwaste.AllowUserToResizeColumns = False
         Me.dgvwaste.AllowUserToResizeRows = False
-        Me.dgvwaste.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvwaste.BackgroundColor = System.Drawing.Color.LavenderBlush
         Me.dgvwaste.ColumnHeadersHeight = 30
         Me.dgvwaste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvwaste.GridColor = System.Drawing.Color.Gray
-        Me.dgvwaste.Location = New System.Drawing.Point(107, 82)
+        Me.dgvwaste.Location = New System.Drawing.Point(94, 74)
         Me.dgvwaste.Name = "dgvwaste"
         Me.dgvwaste.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvwaste.RowTemplate.Height = 25
-        Me.dgvwaste.Size = New System.Drawing.Size(569, 247)
-        Me.dgvwaste.TabIndex = 3
+        Me.dgvwaste.Size = New System.Drawing.Size(569, 254)
+        Me.dgvwaste.TabIndex = 7
         '
         'PrintPreviewDialog1
         '
@@ -90,28 +89,28 @@ Partial Class wastereport
         '
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_exit.Location = New System.Drawing.Point(358, 335)
+        Me.btn_exit.Location = New System.Drawing.Point(464, 334)
         Me.btn_exit.Name = "btn_exit"
-        Me.btn_exit.Size = New System.Drawing.Size(126, 35)
-        Me.btn_exit.TabIndex = 6
+        Me.btn_exit.Size = New System.Drawing.Size(135, 35)
+        Me.btn_exit.TabIndex = 10
         Me.btn_exit.Text = "Exit"
         Me.btn_exit.UseVisualStyleBackColor = False
         '
-        'wastereport
+        'prodrep
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvwaste)
+        Me.Controls.Add(Me.btn_exit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "wastereport"
+        Me.Name = "prodrep"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "wastereport"
+        Me.Text = "prodrep"
         CType(Me.dgvwaste, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -1,11 +1,16 @@
-﻿
+﻿'Public Class 
+'    Private Sub (sender As Object, e As EventArgs) Handles MyBase.Load
+
+'    End Sub
+'End Class
+
 Imports System.Data.OleDb
-Public Class wastereport
+Public Class prodrep
     Dim con As New OleDbConnection
     Dim daCust As New OleDbDataAdapter
     Dim cmd As OleDbCommand
     Dim dtCust As DataTable
-    Private Sub wastereport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub prodrep_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
         'For DataGridView Style
@@ -42,7 +47,7 @@ Public Class wastereport
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
-        Dim sql As String = "select * from tb_waste"
+        Dim sql As String = "select * from tb_prod"
         daCust = New OleDb.OleDbDataAdapter(sql, con)
         dtCust = New DataTable
         daCust.Fill(dtCust)
@@ -55,7 +60,7 @@ Public Class wastereport
             Exit Sub
         End If
 
-        PrintPreviewDialog1.WindowState = FormWindowState.Normal
+        PrintPreviewDialog1.WindowState = FormWindowState.Maximized
         PrintPreviewDialog1.StartPosition = FormStartPosition.CenterScreen
         PrintPreviewDialog1.PrintPreviewControl.Zoom = 1.5
         PrintPreviewDialog1.Document = PrintDocument1
@@ -125,7 +130,7 @@ Public Class wastereport
         Dim DtValue As String = Format(Now.Date, "MMM-dd-yyyy")
 
         'Write Recipt No. & Recipt Date & Company Name
-        e.Graphics.DrawString("BAKE IN WASTE REPORT", FontboldHeader, Brushes.Black, Rect, Str)
+        e.Graphics.DrawString("BAKE IN PRODUCT REPORT", FontboldHeader, Brushes.Black, Rect, Str)
         'e.Graphics.DrawString(TboxAddress.Text, Fontbold, Brushes.Black, Rect1, Str)
         'e.Graphics.DrawString(TboxPhone.Text, Fontbold, Brushes.Black, Rect2, Str)
         e.Graphics.DrawString("Date: " & DtValue, font, Brushes.Black, Rect4, strLeft)
@@ -149,7 +154,7 @@ Public Class wastereport
 
         'Fill Headers with Texts
         e.Graphics.DrawString("Sno", font, Brushes.Black, Rect01, Str)
-        e.Graphics.DrawString("Product ID", font, Brushes.Black, Rect02, Str)
+        'e.Graphics.DrawString("Product ID", font, Brushes.Black, Rect02, Str)
         e.Graphics.DrawString("Product Name", font, Brushes.Black, Rect03, Str)
         e.Graphics.DrawString("Qty", font, Brushes.Black, Rect04, Str)
         e.Graphics.DrawString("Date", font, Brushes.Black, Rect041, Str)
@@ -197,7 +202,7 @@ Public Class wastereport
 
         'Render Total Items
         Dim Rect4x As New Rectangle(LeftMargin + 0, topMargin + ReciptDetailsHeight + YBillStart + 1 + (UnitHeight * 4), TRecwidth, UnitHeight)
-        e.Graphics.DrawString("Total Waste:  " & Rows.Count, font, Brushes.Black, Rect4x, strLeft)
+        e.Graphics.DrawString("Total Products:  " & Rows.Count, font, Brushes.Black, Rect4x, strLeft)
 
 
         'Render the Total Bill Amount

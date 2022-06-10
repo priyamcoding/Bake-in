@@ -24,6 +24,7 @@ Partial Class bakein_menu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bakein_menu))
         Me.dgv_prod = New System.Windows.Forms.DataGridView()
+        Me.btn_exit = New System.Windows.Forms.Button()
         CType(Me.dgv_prod, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,6 +45,19 @@ Partial Class bakein_menu
         Me.dgv_prod.Size = New System.Drawing.Size(366, 211)
         Me.dgv_prod.TabIndex = 0
         '
+        'btn_exit
+        '
+        Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
+        Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btn_exit.ForeColor = System.Drawing.Color.Black
+        Me.btn_exit.Location = New System.Drawing.Point(631, 314)
+        Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_exit.Name = "btn_exit"
+        Me.btn_exit.Size = New System.Drawing.Size(105, 36)
+        Me.btn_exit.TabIndex = 143
+        Me.btn_exit.Text = "Exit"
+        Me.btn_exit.UseVisualStyleBackColor = False
+        '
         'bakein_menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -51,9 +65,12 @@ Partial Class bakein_menu
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(831, 484)
+        Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.dgv_prod)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "bakein_menu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "menu"
         CType(Me.dgv_prod, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -61,4 +78,5 @@ Partial Class bakein_menu
     End Sub
 
     Friend WithEvents dgv_prod As DataGridView
+    Friend WithEvents btn_exit As Button
 End Class

@@ -1,11 +1,16 @@
-﻿Imports System.Data.OleDb
-Public Class Waste_Management
+﻿'Public Class 
+'    Private Sub (sender As Object, e As EventArgs) Handles MyBase.Load
+
+'    End Sub
+'End Class
+Imports System.Data.OleDb
+Public Class waste2
     Dim con As New OleDbConnection
     Dim daWaste As New OleDbDataAdapter
     Dim cmd As OleDbCommand
     Dim dtWaste As DataTable
 
-    Private Sub Waste_Management_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub waste2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dtpDOD.Format = DateTimePickerFormat.Custom
         dtpDOD.CustomFormat = " "
@@ -106,60 +111,60 @@ Public Class Waste_Management
         dtpDOD.Text = selectedWaste.Cells(3).Value
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btn_Delete.Click
-        If MsgBox("Are you sure to delete this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Delete Document") = DialogResult.Yes Then
-            Dim sql As String = "delete from tb_waste where prodID = " & txtProID.Text
+    'Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btn_Delete.Click
+    '    If MsgBox("Are you sure to delete this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Delete Document") = DialogResult.Yes Then
+    '        Dim sql As String = "delete from tb_waste where prodID = " & txtProID.Text
 
-            cmd = New OleDbCommand()
-            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-            cmd.CommandText = sql
-            cmd.Connection = con
-            If con.State = ConnectionState.Closed Then
-                con.Open()
-            End If
-            cmd.ExecuteNonQuery()
+    '        cmd = New OleDbCommand()
+    '        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+    '        cmd.CommandText = sql
+    '        cmd.Connection = con
+    '        If con.State = ConnectionState.Closed Then
+    '            con.Open()
+    '        End If
+    '        cmd.ExecuteNonQuery()
 
-            daWaste.SelectCommand = New OleDbCommand("select * from tb_waste")
-            daWaste.SelectCommand.Connection = con
-            dtWaste.Clear()
-            daWaste.Fill(dtWaste)
-            dgvWaste.DataSource = dtWaste
-        End If
-        MsgBox("Record deleted successfully!!!", MessageBoxIcon.Information)
-        con.Close()
-    End Sub
+    '        daWaste.SelectCommand = New OleDbCommand("select * from tb_waste")
+    '        daWaste.SelectCommand.Connection = con
+    '        dtWaste.Clear()
+    '        daWaste.Fill(dtWaste)
+    '        dgvWaste.DataSource = dtWaste
+    '    End If
+    '    MsgBox("Record deleted successfully!!!", MessageBoxIcon.Information)
+    '    con.Close()
+    'End Sub
 
-    Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
-        Dim sSql As String = "update tb_waste set prodID = " & txtProID.Text & ", pname = '" & txtProNam.Text & "' , qty =  " & txtQuan.Text & " ,  DOD = #" & dtpDOD.Value.Date & "# "
+    'Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
+    '    Dim sSql As String = "update tb_waste set prodID = " & txtProID.Text & ", pname = '" & txtProNam.Text & "' , qty =  " & txtQuan.Text & " ,  DOD = #" & dtpDOD.Value.Date & "# "
 
-        ''Dim sql As String = "insert into tb_waste(prodId, pname, qty, DOD) 
-        '                   values (" & txtProID.Text & ", '" & txtProNam.Text & "', " & txtQuan.Text & ", #" & dtpDOD.Value.Date & "# )"
-        'cmd = New OleDbCommand()
-        'con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-        'cmd.CommandText = sql
-        'cmd.Connection = con
-        'con.Open()
+    '    ''Dim sql As String = "insert into tb_waste(prodId, pname, qty, DOD) 
+    '    '                   values (" & txtProID.Text & ", '" & txtProNam.Text & "', " & txtQuan.Text & ", #" & dtpDOD.Value.Date & "# )"
+    '    'cmd = New OleDbCommand()
+    '    'con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+    '    'cmd.CommandText = sql
+    '    'cmd.Connection = con
+    '    'con.Open()
 
-        'cmd.ExecuteNonQuery()
-        cmd = New OleDbCommand()
-        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-        cmd.CommandText = sSql
-        cmd.Connection = con
-        If con.State = ConnectionState.Closed Then
-            con.Open()
-        End If
-        cmd.ExecuteNonQuery()
-        daWaste.SelectCommand = New OleDbCommand("select * from tb_waste")
-        daWaste.SelectCommand.Connection = con
-        dtWaste.Clear()
-        daWaste.Fill(dtWaste)
-        dgvWaste.DataSource = dtWaste
+    '    'cmd.ExecuteNonQuery()
+    '    cmd = New OleDbCommand()
+    '    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+    '    cmd.CommandText = sSql
+    '    cmd.Connection = con
+    '    If con.State = ConnectionState.Closed Then
+    '        con.Open()
+    '    End If
+    '    cmd.ExecuteNonQuery()
+    '    daWaste.SelectCommand = New OleDbCommand("select * from tb_waste")
+    '    daWaste.SelectCommand.Connection = con
+    '    dtWaste.Clear()
+    '    daWaste.Fill(dtWaste)
+    '    dgvWaste.DataSource = dtWaste
 
-        MsgBox("Record updated successfully.", MessageBoxIcon.Information)
+    '    MsgBox("Record updated successfully.", MessageBoxIcon.Information)
 
-        con.Close()
+    '    con.Close()
 
-    End Sub
+    'End Sub
 
     Private Sub btn_insert_Click(sender As Object, e As EventArgs) Handles btn_insert.Click
         Dim sql As String = "insert into tb_waste( prodID, pname, qty , DOD) values ( " & txtProID.Text & "  ,
@@ -174,7 +179,7 @@ Public Class Waste_Management
 
         cmd.ExecuteNonQuery()
         MsgBox("Record inserted successfully.", MessageBoxIcon.Information)
-        daWaste.SelectCommand = New OleDbCommand("select prodID, pname, qty, DOE from tb_prod", con)
+        daWaste.SelectCommand = New OleDbCommand("select prodID, pname, qty, doe from tb_prod", con)
         daWaste.SelectCommand.Connection = con
         dtWaste.Clear()
         daWaste.Fill(dtWaste)
@@ -194,6 +199,10 @@ Public Class Waste_Management
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         waste_search.Show()
+    End Sub
+
+    Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_insert.Click
+
     End Sub
 End Class
 

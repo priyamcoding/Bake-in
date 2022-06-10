@@ -94,9 +94,11 @@ Partial Class empreport
         Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvemp)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "empreport"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "empreport"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvemp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -18,7 +18,7 @@ Public Class empsearch
         dgvEmpSearch.AlternatingRowsDefaultCellStyle.Font = New Font("Century Gothic", 9)
         dgvEmpSearch.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.LightSteelBlue
         dgvEmpSearch.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black
-        dgvEmpSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvEmpSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         dgvEmpSearch.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
         dgvEmpSearch.BorderStyle = BorderStyle.Fixed3D
         dgvEmpSearch.CellBorderStyle = DataGridViewCellBorderStyle.Single

@@ -22,6 +22,7 @@ Partial Class waste_search
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(waste_search))
         Me.dgvWasteSearch = New System.Windows.Forms.DataGridView()
         Me.btnItemSearch = New System.Windows.Forms.Button()
         Me.txtItemTitleSearch = New System.Windows.Forms.TextBox()
@@ -41,7 +42,7 @@ Partial Class waste_search
         Me.dgvWasteSearch.ColumnHeadersHeight = 30
         Me.dgvWasteSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvWasteSearch.GridColor = System.Drawing.Color.Gray
-        Me.dgvWasteSearch.Location = New System.Drawing.Point(134, 127)
+        Me.dgvWasteSearch.Location = New System.Drawing.Point(48, 118)
         Me.dgvWasteSearch.Name = "dgvWasteSearch"
         Me.dgvWasteSearch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvWasteSearch.RowTemplate.Height = 25
@@ -53,7 +54,7 @@ Partial Class waste_search
         Me.btnItemSearch.BackColor = System.Drawing.Color.RosyBrown
         Me.btnItemSearch.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnItemSearch.ForeColor = System.Drawing.Color.Black
-        Me.btnItemSearch.Location = New System.Drawing.Point(529, 76)
+        Me.btnItemSearch.Location = New System.Drawing.Point(486, 76)
         Me.btnItemSearch.Name = "btnItemSearch"
         Me.btnItemSearch.Size = New System.Drawing.Size(105, 36)
         Me.btnItemSearch.TabIndex = 10
@@ -63,7 +64,7 @@ Partial Class waste_search
         'txtItemTitleSearch
         '
         Me.txtItemTitleSearch.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtItemTitleSearch.Location = New System.Drawing.Point(250, 84)
+        Me.txtItemTitleSearch.Location = New System.Drawing.Point(207, 84)
         Me.txtItemTitleSearch.Name = "txtItemTitleSearch"
         Me.txtItemTitleSearch.Size = New System.Drawing.Size(100, 22)
         Me.txtItemTitleSearch.TabIndex = 9
@@ -74,7 +75,7 @@ Partial Class waste_search
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
-        Me.Label2.Location = New System.Drawing.Point(146, 85)
+        Me.Label2.Location = New System.Drawing.Point(103, 85)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 16)
         Me.Label2.TabIndex = 8
@@ -97,7 +98,7 @@ Partial Class waste_search
         Me.btnExit.BackColor = System.Drawing.Color.RosyBrown
         Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnExit.ForeColor = System.Drawing.Color.Black
-        Me.btnExit.Location = New System.Drawing.Point(658, 372)
+        Me.btnExit.Location = New System.Drawing.Point(486, 338)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(105, 36)
         Me.btnExit.TabIndex = 6
@@ -108,6 +109,8 @@ Partial Class waste_search
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.dgvWasteSearch)
         Me.Controls.Add(Me.btnItemSearch)
@@ -115,7 +118,9 @@ Partial Class waste_search
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "waste_search"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "waste_search"
         CType(Me.dgvWasteSearch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

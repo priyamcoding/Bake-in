@@ -51,7 +51,7 @@ Partial Class Customer_mnmgt
         'dtpDOB
         '
         Me.dtpDOB.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.dtpDOB.Location = New System.Drawing.Point(411, 219)
+        Me.dtpDOB.Location = New System.Drawing.Point(326, 211)
         Me.dtpDOB.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpDOB.Name = "dtpDOB"
         Me.dtpDOB.Size = New System.Drawing.Size(129, 22)
@@ -63,7 +63,7 @@ Partial Class Customer_mnmgt
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Sienna
-        Me.Label9.Location = New System.Drawing.Point(249, 187)
+        Me.Label9.Location = New System.Drawing.Point(164, 179)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 16)
@@ -75,7 +75,7 @@ Partial Class Customer_mnmgt
         Me.cmbGender.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.cmbGender.FormattingEnabled = True
         Me.cmbGender.Items.AddRange(New Object() {"Female", "Male", "Choose not to answer"})
-        Me.cmbGender.Location = New System.Drawing.Point(411, 178)
+        Me.cmbGender.Location = New System.Drawing.Point(326, 170)
         Me.cmbGender.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbGender.Name = "cmbGender"
         Me.cmbGender.Size = New System.Drawing.Size(129, 25)
@@ -84,7 +84,7 @@ Partial Class Customer_mnmgt
         'txtCustName
         '
         Me.txtCustName.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtCustName.Location = New System.Drawing.Point(411, 137)
+        Me.txtCustName.Location = New System.Drawing.Point(326, 129)
         Me.txtCustName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCustName.Name = "txtCustName"
         Me.txtCustName.Size = New System.Drawing.Size(129, 22)
@@ -96,7 +96,7 @@ Partial Class Customer_mnmgt
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
-        Me.Label2.Location = New System.Drawing.Point(249, 224)
+        Me.Label2.Location = New System.Drawing.Point(164, 216)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(95, 16)
@@ -109,7 +109,7 @@ Partial Class Customer_mnmgt
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Sienna
-        Me.Label4.Location = New System.Drawing.Point(249, 138)
+        Me.Label4.Location = New System.Drawing.Point(164, 130)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(120, 16)
@@ -119,7 +119,7 @@ Partial Class Customer_mnmgt
         'txtcustID
         '
         Me.txtcustID.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtcustID.Location = New System.Drawing.Point(411, 102)
+        Me.txtcustID.Location = New System.Drawing.Point(326, 94)
         Me.txtcustID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtcustID.Name = "txtcustID"
         Me.txtcustID.Size = New System.Drawing.Size(129, 22)
@@ -131,7 +131,7 @@ Partial Class Customer_mnmgt
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Sienna
-        Me.Label3.Location = New System.Drawing.Point(249, 106)
+        Me.Label3.Location = New System.Drawing.Point(164, 98)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(90, 16)
@@ -144,7 +144,7 @@ Partial Class Customer_mnmgt
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Sienna
-        Me.Label7.Location = New System.Drawing.Point(576, 106)
+        Me.Label7.Location = New System.Drawing.Point(491, 98)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(111, 16)
@@ -157,7 +157,7 @@ Partial Class Customer_mnmgt
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.Sienna
-        Me.Label10.Location = New System.Drawing.Point(576, 157)
+        Me.Label10.Location = New System.Drawing.Point(491, 149)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(69, 16)
@@ -167,7 +167,7 @@ Partial Class Customer_mnmgt
         'txtAdd
         '
         Me.txtAdd.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtAdd.Location = New System.Drawing.Point(740, 159)
+        Me.txtAdd.Location = New System.Drawing.Point(655, 151)
         Me.txtAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAdd.Multiline = True
         Me.txtAdd.Name = "txtAdd"
@@ -177,7 +177,7 @@ Partial Class Customer_mnmgt
         'txtPhno
         '
         Me.txtPhno.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtPhno.Location = New System.Drawing.Point(740, 106)
+        Me.txtPhno.Location = New System.Drawing.Point(655, 98)
         Me.txtPhno.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPhno.Name = "txtPhno"
         Me.txtPhno.Size = New System.Drawing.Size(129, 22)
@@ -189,7 +189,7 @@ Partial Class Customer_mnmgt
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Bell MT", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Maroon
-        Me.Label8.Location = New System.Drawing.Point(404, 39)
+        Me.Label8.Location = New System.Drawing.Point(319, 31)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(454, 37)
@@ -206,7 +206,7 @@ Partial Class Customer_mnmgt
         Me.dgv_cust.ColumnHeadersHeight = 30
         Me.dgv_cust.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv_cust.GridColor = System.Drawing.Color.Gray
-        Me.dgv_cust.Location = New System.Drawing.Point(200, 262)
+        Me.dgv_cust.Location = New System.Drawing.Point(115, 254)
         Me.dgv_cust.Name = "dgv_cust"
         Me.dgv_cust.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgv_cust.RowTemplate.Height = 25
@@ -217,7 +217,7 @@ Partial Class Customer_mnmgt
         '
         Me.btn_update.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_update.Location = New System.Drawing.Point(333, 417)
+        Me.btn_update.Location = New System.Drawing.Point(248, 409)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(105, 36)
         Me.btn_update.TabIndex = 84
@@ -229,7 +229,7 @@ Partial Class Customer_mnmgt
         Me.btn_reset.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_reset.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_reset.ForeColor = System.Drawing.Color.Black
-        Me.btn_reset.Location = New System.Drawing.Point(555, 417)
+        Me.btn_reset.Location = New System.Drawing.Point(470, 409)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(105, 36)
         Me.btn_reset.TabIndex = 83
@@ -240,7 +240,7 @@ Partial Class Customer_mnmgt
         '
         Me.btnDelete.BackColor = System.Drawing.Color.RosyBrown
         Me.btnDelete.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btnDelete.Location = New System.Drawing.Point(444, 417)
+        Me.btnDelete.Location = New System.Drawing.Point(359, 409)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(105, 36)
         Me.btnDelete.TabIndex = 85
@@ -251,7 +251,7 @@ Partial Class Customer_mnmgt
         '
         Me.btn_insert.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_insert.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_insert.Location = New System.Drawing.Point(222, 417)
+        Me.btn_insert.Location = New System.Drawing.Point(137, 409)
         Me.btn_insert.Name = "btn_insert"
         Me.btn_insert.Size = New System.Drawing.Size(105, 36)
         Me.btn_insert.TabIndex = 86
@@ -268,7 +268,7 @@ Partial Class Customer_mnmgt
         Me.dgvcust2.ColumnHeadersHeight = 30
         Me.dgvcust2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvcust2.GridColor = System.Drawing.Color.Gray
-        Me.dgvcust2.Location = New System.Drawing.Point(571, 262)
+        Me.dgvcust2.Location = New System.Drawing.Point(486, 254)
         Me.dgvcust2.Name = "dgvcust2"
         Me.dgvcust2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvcust2.RowTemplate.Height = 25
@@ -280,7 +280,7 @@ Partial Class Customer_mnmgt
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(774, 417)
+        Me.btn_exit.Location = New System.Drawing.Point(689, 409)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -293,7 +293,7 @@ Partial Class Customer_mnmgt
         Me.btn_search.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_search.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_search.ForeColor = System.Drawing.Color.Black
-        Me.btn_search.Location = New System.Drawing.Point(665, 417)
+        Me.btn_search.Location = New System.Drawing.Point(580, 409)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(105, 36)
@@ -329,9 +329,11 @@ Partial Class Customer_mnmgt
         Me.Controls.Add(Me.txtCustName)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Customer_mnmgt"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Customer_mngmt"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgv_cust, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvcust2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

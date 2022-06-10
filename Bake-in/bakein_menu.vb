@@ -46,4 +46,9 @@ Public Class bakein_menu
         dgv_prod.DataSource = dtSal
         con.Close()
     End Sub
+
+    Private Sub btn_exit_Click(sender As Object, e As EventArgs) Handles btn_exit.Click
+        Me.Close()
+        Dashboard.Show()
+    End Sub
 End Class

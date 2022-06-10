@@ -25,9 +25,11 @@ Partial Class Splash
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Splash))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btn_update = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -40,18 +42,31 @@ Partial Class Splash
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'ProgressBar1
+        'btn_update
         '
-        Me.ProgressBar1.BackColor = System.Drawing.Color.Black
-        Me.ProgressBar1.ForeColor = System.Drawing.Color.Black
-        Me.ProgressBar1.Location = New System.Drawing.Point(201, 382)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(449, 23)
-        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.ProgressBar1.TabIndex = 1
+        Me.btn_update.BackColor = System.Drawing.Color.RosyBrown
+        Me.btn_update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_update.FlatAppearance.BorderSize = 0
+        Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btn_update.ForeColor = System.Drawing.Color.Black
+        Me.btn_update.Location = New System.Drawing.Point(299, 350)
+        Me.btn_update.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(251, 45)
+        Me.btn_update.TabIndex = 57
+        Me.btn_update.Text = "Let's get started"
+        Me.btn_update.UseVisualStyleBackColor = False
         '
-        'Timer1
+        'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.RosyBrown
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(506, 363)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 23)
+        Me.PictureBox2.TabIndex = 58
+        Me.PictureBox2.TabStop = False
         '
         'Splash
         '
@@ -60,19 +75,24 @@ Partial Class Splash
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(812, 463)
-        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.btn_update)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Splash"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Splash"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents btn_update As Button
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

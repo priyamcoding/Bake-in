@@ -118,7 +118,10 @@ Partial Class prod_search
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "prod_search"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "prod_search"
         CType(Me.dgvProductSearch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

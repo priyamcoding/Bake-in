@@ -98,34 +98,7 @@ Public Class Customer_mnmgt
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_update.Click
 
-        'con = New OleDbConnection
-        'con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb"
-        'Dim dr As OleDbDataReader
 
-        'Try
-        '    con.Open()
-        '    Dim sql As String
-        '    sql = "update tb_cust set custname = '" & txtCustName.Text & "',  gender = '" & cmbGender.SelectedItem & "', dob = #" & dtpDOB.Value.Date & "#, phno= " & Double.Parse(txtPhno.Text) & ", add = '" & txtAdd.Text & "' where custID = " & txtcustID.Text & " "
-        '    cmd = New OleDbCommand(sql, con)
-
-        '    dr = cmd.ExecuteReader
-        '    cmd.ExecuteNonQuery()
-
-        '    daCust.SelectCommand = New OleDbCommand("select * from tb_cust")
-        '    daCust.SelectCommand.Connection = con
-        '    dtCust.Clear()
-        '    daCust.Fill(dtCust)
-        '    dgv_cust.DataSource = dtCust
-        '    'dgvcust2.DataSource= dtCust
-        '    MessageBox.Show("Data Updated Successfully.")
-        '    con.Close()
-
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message)
-        'Finally
-        '    con.Dispose()
-
-        'End Try
 
 
         If MsgBox("Are you sure you want to update this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Update Document") = DialogResult.Yes Then
@@ -220,21 +193,7 @@ Public Class Customer_mnmgt
     End Sub
 
     Private Sub btn_insert_Click(sender As Object, e As EventArgs) Handles btn_insert.Click
-        'cmd = New OleDbCommand()
-        'con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-        'Dim sql As String = "insert into tb_cust values (" & txtcustID.Text & ", '" & txtCustName.Text & "', '" & cmbGender.SelectedItem & "', #" & dtpDOB.Value.Date & "#, " & Double.Parse(txtPhno.Text) & ", '" & txtAdd.Text & "')"
-        'cmd.CommandText = sql
-        'MessageBox.Show(sql)
-        'cmd.Connection = con
-        'con.Open()
-        'cmd.ExecuteNonQuery()
-        'daCust.SelectCommand = New OleDbCommand("select * from tb_cust")
-        'daCust.SelectCommand.Connection = con
-        'dtCust.Clear()
-        'daCust.Fill(dtCust)
-        ''filling form 
 
-        'con.Close()
 
 
 
@@ -283,15 +242,5 @@ Public Class Customer_mnmgt
 
 
 
-    '    Private Sub dgvcust2_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvcust2.CellMouseClick
-    '        Dim connString As String
-    '        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb"
-    '        con = New OleDbConnection
-    '        con.ConnectionString = connString
-    '        If con.State = ConnectionState.Closed Then
-    '            con.Open()
-    '        End If
 
-    '        txtcustID.Text = dgvcust2.Rows().Item(e.RowIndex).Cells(0).Value
-    '    End Sub
 End Class
