@@ -23,23 +23,11 @@ Partial Class empreport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(empreport))
-        Me.btn_print = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvemp = New System.Windows.Forms.DataGridView()
         Me.btn_exit = New System.Windows.Forms.Button()
         CType(Me.dgvemp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btn_print
-        '
-        Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(297, 319)
-        Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(106, 36)
-        Me.btn_print.TabIndex = 8
-        Me.btn_print.Text = "Print"
-        Me.btn_print.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -75,7 +63,7 @@ Partial Class empreport
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(424, 319)
+        Me.btn_exit.Location = New System.Drawing.Point(454, 300)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -91,7 +79,6 @@ Partial Class empreport
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btn_exit)
-        Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvemp)
         Me.DoubleBuffered = True
@@ -104,8 +91,6 @@ Partial Class empreport
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btn_print As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvemp As DataGridView
     Friend WithEvents btn_exit As Button

@@ -23,7 +23,6 @@ Partial Class wastereport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(wastereport))
-        Me.btn_print = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvwaste = New System.Windows.Forms.DataGridView()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
@@ -31,17 +30,6 @@ Partial Class wastereport
         Me.btn_exit = New System.Windows.Forms.Button()
         CType(Me.dgvwaste, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btn_print
-        '
-        Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(217, 335)
-        Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(126, 35)
-        Me.btn_print.TabIndex = 5
-        Me.btn_print.Text = "Print"
-        Me.btn_print.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -90,7 +78,7 @@ Partial Class wastereport
         '
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_exit.Location = New System.Drawing.Point(358, 335)
+        Me.btn_exit.Location = New System.Drawing.Point(550, 335)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(126, 35)
         Me.btn_exit.TabIndex = 6
@@ -105,7 +93,6 @@ Partial Class wastereport
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btn_exit)
-        Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvwaste)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -117,8 +104,6 @@ Partial Class wastereport
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btn_print As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvwaste As DataGridView
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog

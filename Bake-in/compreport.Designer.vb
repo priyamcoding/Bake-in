@@ -23,22 +23,11 @@ Partial Class compreport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(compreport))
-        Me.btn_print = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvcomp = New System.Windows.Forms.DataGridView()
+        Me.btnExit = New System.Windows.Forms.Button()
         CType(Me.dgvcomp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btn_print
-        '
-        Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(452, 358)
-        Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(105, 36)
-        Me.btn_print.TabIndex = 8
-        Me.btn_print.Text = "Print"
-        Me.btn_print.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -69,6 +58,18 @@ Partial Class compreport
         Me.dgvcomp.Size = New System.Drawing.Size(539, 261)
         Me.dgvcomp.TabIndex = 6
         '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnExit.ForeColor = System.Drawing.Color.Black
+        Me.btnExit.Location = New System.Drawing.Point(480, 338)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(105, 36)
+        Me.btnExit.TabIndex = 13
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
         'compreport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -76,7 +77,7 @@ Partial Class compreport
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btn_print)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvcomp)
         Me.DoubleBuffered = True
@@ -89,8 +90,7 @@ Partial Class compreport
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btn_print As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvcomp As DataGridView
+    Friend WithEvents btnExit As Button
 End Class

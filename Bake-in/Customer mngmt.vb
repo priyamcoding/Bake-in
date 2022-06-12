@@ -96,37 +96,37 @@ Public Class Customer_mnmgt
     End Sub
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_update.Click
+    'Private Sub Button1_Click(sender As Object, e As EventArgs)
 
 
 
 
-        If MsgBox("Are you sure you want to update this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Update Document") = DialogResult.Yes Then
+    '    If MsgBox("Are you sure you want to update this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Update Document") = DialogResult.Yes Then
 
-            Dim sSql As String = "update tb_cust set custname = '" & txtCustName.Text & "', 
-            gender =  '" & cmbGender.SelectedItem & "' , dob = #" & dtpDOB.Value.Date & "#, phone = " & Double.Parse(txtPhno.Text) & ", address = '" & txtAdd.Text & "' where custID = " & txtcustID.Text & " "
+    '        Dim sSql As String = "update tb_cust set custname = '" & txtCustName.Text & "', 
+    '        gender =  '" & cmbGender.SelectedItem & "' , dob = #" & dtpDOB.Value.Date & "#, phone = " & Double.Parse(txtPhno.Text) & ", address = '" & txtAdd.Text & "' where custID = " & txtcustID.Text & " "
 
-            MsgBox(sSql)
-            cmd = New OleDbCommand()
-            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-            cmd.CommandText = sSql
-            cmd.Connection = con
-            If con.State = ConnectionState.Closed Then
-                con.Open()
-            End If
-            cmd.ExecuteNonQuery()
-            daCust.SelectCommand = New OleDbCommand("select * from tb_prod")
-            daCust.SelectCommand.Connection = con
-            dtCust.Clear()
-            daCust.Fill(dtCust)
-            dgvcust2.DataSource = dtCust
+    '        MsgBox(sSql)
+    '        cmd = New OleDbCommand()
+    '        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+    '        cmd.CommandText = sSql
+    '        cmd.Connection = con
+    '        If con.State = ConnectionState.Closed Then
+    '            con.Open()
+    '        End If
+    '        cmd.ExecuteNonQuery()
+    '        daCust.SelectCommand = New OleDbCommand("select * from tb_prod")
+    '        daCust.SelectCommand.Connection = con
+    '        dtCust.Clear()
+    '        daCust.Fill(dtCust)
+    '        dgvcust2.DataSource = dtCust
 
-        End If
+    '    End If
 
-        MsgBox("Record updated successfully!!!", MessageBoxIcon.Information)
-        con.Close()
+    '    MsgBox("Record updated successfully!!!", MessageBoxIcon.Information)
+    '    con.Close()
 
-    End Sub
+    'End Sub
 
     Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
         Dim txt

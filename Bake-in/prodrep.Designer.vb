@@ -23,7 +23,6 @@ Partial Class prodrep
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(prodrep))
-        Me.btn_print = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvwaste = New System.Windows.Forms.DataGridView()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
@@ -31,17 +30,6 @@ Partial Class prodrep
         Me.btn_exit = New System.Windows.Forms.Button()
         CType(Me.dgvwaste, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btn_print
-        '
-        Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(298, 334)
-        Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(135, 35)
-        Me.btn_print.TabIndex = 9
-        Me.btn_print.Text = "Print"
-        Me.btn_print.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -89,7 +77,7 @@ Partial Class prodrep
         '
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_exit.Location = New System.Drawing.Point(464, 334)
+        Me.btn_exit.Location = New System.Drawing.Point(528, 334)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(135, 35)
         Me.btn_exit.TabIndex = 10
@@ -103,7 +91,6 @@ Partial Class prodrep
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvwaste)
         Me.Controls.Add(Me.btn_exit)
@@ -116,8 +103,6 @@ Partial Class prodrep
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btn_print As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvwaste As DataGridView
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog

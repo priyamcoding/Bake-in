@@ -37,7 +37,7 @@ Partial Class Itemsearch
         Me.btnExit.BackColor = System.Drawing.Color.RosyBrown
         Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnExit.ForeColor = System.Drawing.Color.Black
-        Me.btnExit.Location = New System.Drawing.Point(640, 402)
+        Me.btnExit.Location = New System.Drawing.Point(649, 383)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(105, 36)
         Me.btnExit.TabIndex = 0

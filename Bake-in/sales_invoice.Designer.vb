@@ -32,7 +32,6 @@ Partial Class sales_invoice
         Me.btn_add = New System.Windows.Forms.Button()
         Me.btn_remline = New System.Windows.Forms.Button()
         Me.btn_ClrAll = New System.Windows.Forms.Button()
-        Me.btn_print = New System.Windows.Forms.Button()
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.invoice_heading = New System.Windows.Forms.Label()
@@ -46,7 +45,6 @@ Partial Class sales_invoice
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.dgv_prod = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dgv_invoice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_prod, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -141,21 +139,10 @@ Partial Class sales_invoice
         Me.btn_ClrAll.Text = "Clear"
         Me.btn_ClrAll.UseVisualStyleBackColor = False
         '
-        'btn_print
-        '
-        Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(553, 408)
-        Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(105, 36)
-        Me.btn_print.TabIndex = 5
-        Me.btn_print.Text = "PRINT"
-        Me.btn_print.UseVisualStyleBackColor = False
-        '
         'txtPrice
         '
         Me.txtPrice.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtPrice.Location = New System.Drawing.Point(664, 77)
+        Me.txtPrice.Location = New System.Drawing.Point(750, 80)
         Me.txtPrice.Multiline = True
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(100, 25)
@@ -166,7 +153,7 @@ Partial Class sales_invoice
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
-        Me.Label2.Location = New System.Drawing.Point(618, 80)
+        Me.Label2.Location = New System.Drawing.Point(703, 80)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 16)
         Me.Label2.TabIndex = 8
@@ -187,10 +174,10 @@ Partial Class sales_invoice
         'txtQty
         '
         Me.txtQty.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtQty.Location = New System.Drawing.Point(511, 77)
+        Me.txtQty.Location = New System.Drawing.Point(553, 77)
         Me.txtQty.Multiline = True
         Me.txtQty.Name = "txtQty"
-        Me.txtQty.Size = New System.Drawing.Size(69, 25)
+        Me.txtQty.Size = New System.Drawing.Size(105, 25)
         Me.txtQty.TabIndex = 11
         '
         'Label3
@@ -200,14 +187,14 @@ Partial Class sales_invoice
         Me.Label3.ForeColor = System.Drawing.Color.Sienna
         Me.Label3.Location = New System.Drawing.Point(432, 80)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 16)
+        Me.Label3.Size = New System.Drawing.Size(106, 16)
         Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Quantity"
+        Me.Label3.Text = "Order Quantity"
         '
         'txttotal
         '
         Me.txttotal.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txttotal.Location = New System.Drawing.Point(553, 307)
+        Me.txttotal.Location = New System.Drawing.Point(553, 422)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.ReadOnly = True
         Me.txttotal.Size = New System.Drawing.Size(105, 22)
@@ -219,7 +206,7 @@ Partial Class sales_invoice
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Sienna
-        Me.Label4.Location = New System.Drawing.Point(559, 276)
+        Me.Label4.Location = New System.Drawing.Point(559, 391)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(90, 16)
         Me.Label4.TabIndex = 13
@@ -252,7 +239,7 @@ Partial Class sales_invoice
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(553, 449)
+        Me.btn_exit.Location = New System.Drawing.Point(553, 265)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -289,17 +276,6 @@ Partial Class sales_invoice
         Me.Label5.TabIndex = 144
         Me.Label5.Text = "MENU"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.RosyBrown
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(553, 335)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(105, 58)
-        Me.Button1.TabIndex = 145
-        Me.Button1.Text = "SHOW INVOICE"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'sales_invoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -307,7 +283,6 @@ Partial Class sales_invoice
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1135, 528)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.dgv_prod)
         Me.Controls.Add(Me.btn_exit)
@@ -319,17 +294,18 @@ Partial Class sales_invoice
         Me.Controls.Add(Me.invoice_heading)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.btn_ClrAll)
         Me.Controls.Add(Me.btn_remline)
         Me.Controls.Add(Me.btn_add)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgv_invoice)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "sales_invoice"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "sales_invoice"
         Me.TopMost = True
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         CType(Me.dgv_invoice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgv_prod, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -342,7 +318,6 @@ Partial Class sales_invoice
     Friend WithEvents btn_add As Button
     Friend WithEvents btn_remline As Button
     Friend WithEvents btn_ClrAll As Button
-    Friend WithEvents btn_print As Button
     Friend WithEvents txtPrice As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents invoice_heading As Label
@@ -360,5 +335,4 @@ Partial Class sales_invoice
     Friend WithEvents btn_exit As Button
     Friend WithEvents dgv_prod As DataGridView
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
 End Class

@@ -36,28 +36,28 @@ Public Class sales_invoice
         dgv_invoice.RowHeadersDefaultCellStyle.SelectionForeColor = Color.Black
 
         'For DataGridView2 Style
-        dgv_prod.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
-        dgv_prod.AlternatingRowsDefaultCellStyle.Font = New Font("Century Gothic", 9)
-        dgv_prod.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.LightSteelBlue
-        dgv_prod.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black
-        dgv_prod.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        dgv_prod.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
-        dgv_prod.BorderStyle = BorderStyle.Fixed3D
-        dgv_prod.CellBorderStyle = DataGridViewCellBorderStyle.Single
-        dgv_prod.EnableHeadersVisualStyles = False
-        dgv_prod.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        dgv_prod.ColumnHeadersDefaultCellStyle.Font = New Font("Century Gothic", 10, FontStyle.Bold)
-        dgv_prod.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 60, 79)
-        dgv_prod.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-        dgv_prod.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 60, 79)
-        dgv_prod.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.White
-        dgv_prod.DefaultCellStyle.Font = New Font("Century Gothic", 9)
-        dgv_prod.DefaultCellStyle.SelectionBackColor = Color.LightSteelBlue
-        dgv_prod.DefaultCellStyle.SelectionForeColor = Color.Black
-        dgv_prod.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised
-        dgv_prod.RowHeadersDefaultCellStyle.Font = New Font("Century Gothic", 9)
-        dgv_prod.RowHeadersDefaultCellStyle.SelectionBackColor = Color.White
-        dgv_prod.RowHeadersDefaultCellStyle.SelectionForeColor = Color.Black
+        'dgv_prod.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+        'dgv_prod.AlternatingRowsDefaultCellStyle.Font = New Font("Century Gothic", 9)
+        'dgv_prod.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.LightSteelBlue
+        'dgv_prod.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black
+        'dgv_prod.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        'dgv_prod.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+        'dgv_prod.BorderStyle = BorderStyle.Fixed3D
+        'dgv_prod.CellBorderStyle = DataGridViewCellBorderStyle.Single
+        'dgv_prod.EnableHeadersVisualStyles = False
+        'dgv_prod.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        'dgv_prod.ColumnHeadersDefaultCellStyle.Font = New Font("Century Gothic", 10, FontStyle.Bold)
+        'dgv_prod.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 60, 79)
+        'dgv_prod.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        'dgv_prod.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 60, 79)
+        'dgv_prod.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.White
+        'dgv_prod.DefaultCellStyle.Font = New Font("Century Gothic", 9)
+        'dgv_prod.DefaultCellStyle.SelectionBackColor = Color.LightSteelBlue
+        'dgv_prod.DefaultCellStyle.SelectionForeColor = Color.Black
+        'dgv_prod.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised
+        'dgv_prod.RowHeadersDefaultCellStyle.Font = New Font("Century Gothic", 9)
+        'dgv_prod.RowHeadersDefaultCellStyle.SelectionBackColor = Color.White
+        'dgv_prod.RowHeadersDefaultCellStyle.SelectionForeColor = Color.Black
 
         Dim connString As String
         connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\maneesh\\source\\repos\\dbBakeIn.accdb"
@@ -66,11 +66,23 @@ Public Class sales_invoice
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
-        Dim sql As String = "select pname, price from tb_prod"
+        Dim sql As String = "select * from tb_prod"
         daSal = New OleDb.OleDbDataAdapter(sql, con)
         dtSal = New DataTable
         daSal.Fill(dtSal)
-        dgv_prod.DataSource = dtSal
+        cmd = New OleDbCommand(sql, con)
+        cmbName.DisplayMember = "pname"
+        cmbName.ValueMember = "prodID"
+
+        Dim dr As OleDbDataReader
+        dr = cmd.ExecuteReader
+        dr.Read()
+
+        'for text box
+        txtQty.Text = dr("qty")
+        txtPrice.Text = dr("price")
+
+        'dgv_prod.DataSource = dtSal
         con.Close()
     End Sub
 
@@ -138,22 +150,4 @@ Public Class sales_invoice
 
     End Sub
 
-
-
-    Private Sub btn_print_Click(sender As Object, e As EventArgs) Handles btn_print.Click
-        'PrintPreviewDialog1.Document = PrintDocument1
-        'PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
-        'PrintPreviewDialog1.ShowDialog()
-
-
-    End Sub
-
-    Private Sub dgv_invoice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_invoice.CellContentClick
-
-    End Sub
-
-    'Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-    '    Dim imagebmp As New Bitmap(Me.dgv_invoice.Width, Me.dgv_invoice.Height)
-    '    e.Graphics.DrawImage(imagebmp, 0, 0)
-    'End Sub
 End Class

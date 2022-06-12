@@ -50,7 +50,7 @@ Public Class wastereport
         con.Close()
     End Sub
 
-    Private Sub btn_print_Click(sender As Object, e As EventArgs) Handles btn_print.Click
+    Private Sub btn_print_Click(sender As Object, e As EventArgs)
         If dgvwaste.Rows.Count = 0 Then
             Exit Sub
         End If

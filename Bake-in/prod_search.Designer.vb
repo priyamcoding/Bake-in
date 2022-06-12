@@ -54,7 +54,7 @@ Partial Class prod_search
         Me.btnItemSearch.BackColor = System.Drawing.Color.RosyBrown
         Me.btnItemSearch.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnItemSearch.ForeColor = System.Drawing.Color.Black
-        Me.btnItemSearch.Location = New System.Drawing.Point(528, 85)
+        Me.btnItemSearch.Location = New System.Drawing.Point(528, 83)
         Me.btnItemSearch.Name = "btnItemSearch"
         Me.btnItemSearch.Size = New System.Drawing.Size(105, 36)
         Me.btnItemSearch.TabIndex = 16
@@ -98,7 +98,7 @@ Partial Class prod_search
         Me.btnExit.BackColor = System.Drawing.Color.RosyBrown
         Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnExit.ForeColor = System.Drawing.Color.Black
-        Me.btnExit.Location = New System.Drawing.Point(528, 405)
+        Me.btnExit.Location = New System.Drawing.Point(528, 388)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(105, 36)
         Me.btnExit.TabIndex = 12

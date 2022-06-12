@@ -52,4 +52,9 @@ Public Class compreport
     Private Sub dgvcomp_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvcomp.CellContentClick
 
     End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+        Dashboard.Show()
+    End Sub
 End Class

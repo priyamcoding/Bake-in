@@ -1,8 +1,4 @@
-﻿'Public Class 
-'    Private Sub (sender As Object, e As EventArgs) Handles MyBase.Load
-
-'    End Sub
-'End Class
+﻿
 Imports System.Data.OleDb
 Public Class waste2
     Dim con As New OleDbConnection
@@ -49,14 +45,7 @@ Public Class waste2
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
-        'Dim sql1 As String
 
-        'Dim sql1 As String = "insert into tb_waste(prodID, pname, qty, DOD) 
-        ''                    values (" & txtProID.Text & ", '" & cmbProNam.SelectedItem & "', " & txtQuan.Text & ", #" & dtpDOD.Value.Date & "# )"
-
-        'con.Close()
-
-        'sql1 = "Select t2.prodID , [prodname] , [qty], [DOE] FROM tb_prod as t1 where t2.txtprodID = t1.txtproID"
 
         Dim sql As String = "select prodID, pname, qty, DOE  from tb_prod "
         'MsgBox(sql)
@@ -111,60 +100,7 @@ Public Class waste2
         dtpDOD.Text = selectedWaste.Cells(3).Value
     End Sub
 
-    'Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btn_Delete.Click
-    '    If MsgBox("Are you sure to delete this entry?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Delete Document") = DialogResult.Yes Then
-    '        Dim sql As String = "delete from tb_waste where prodID = " & txtProID.Text
 
-    '        cmd = New OleDbCommand()
-    '        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-    '        cmd.CommandText = sql
-    '        cmd.Connection = con
-    '        If con.State = ConnectionState.Closed Then
-    '            con.Open()
-    '        End If
-    '        cmd.ExecuteNonQuery()
-
-    '        daWaste.SelectCommand = New OleDbCommand("select * from tb_waste")
-    '        daWaste.SelectCommand.Connection = con
-    '        dtWaste.Clear()
-    '        daWaste.Fill(dtWaste)
-    '        dgvWaste.DataSource = dtWaste
-    '    End If
-    '    MsgBox("Record deleted successfully!!!", MessageBoxIcon.Information)
-    '    con.Close()
-    'End Sub
-
-    'Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
-    '    Dim sSql As String = "update tb_waste set prodID = " & txtProID.Text & ", pname = '" & txtProNam.Text & "' , qty =  " & txtQuan.Text & " ,  DOD = #" & dtpDOD.Value.Date & "# "
-
-    '    ''Dim sql As String = "insert into tb_waste(prodId, pname, qty, DOD) 
-    '    '                   values (" & txtProID.Text & ", '" & txtProNam.Text & "', " & txtQuan.Text & ", #" & dtpDOD.Value.Date & "# )"
-    '    'cmd = New OleDbCommand()
-    '    'con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-    '    'cmd.CommandText = sql
-    '    'cmd.Connection = con
-    '    'con.Open()
-
-    '    'cmd.ExecuteNonQuery()
-    '    cmd = New OleDbCommand()
-    '    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-    '    cmd.CommandText = sSql
-    '    cmd.Connection = con
-    '    If con.State = ConnectionState.Closed Then
-    '        con.Open()
-    '    End If
-    '    cmd.ExecuteNonQuery()
-    '    daWaste.SelectCommand = New OleDbCommand("select * from tb_waste")
-    '    daWaste.SelectCommand.Connection = con
-    '    dtWaste.Clear()
-    '    daWaste.Fill(dtWaste)
-    '    dgvWaste.DataSource = dtWaste
-
-    '    MsgBox("Record updated successfully.", MessageBoxIcon.Information)
-
-    '    con.Close()
-
-    'End Sub
 
     Private Sub btn_insert_Click(sender As Object, e As EventArgs) Handles btn_insert.Click
         Dim sql As String = "insert into tb_waste( prodID, pname, qty , DOD) values ( " & txtProID.Text & "  ,
@@ -206,10 +142,3 @@ Public Class waste2
     End Sub
 End Class
 
-'Public Class newjoinquery
-'    Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
-
-'    Private Sub newjoinquery_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-'    End Sub
-
-'End Class

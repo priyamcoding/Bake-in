@@ -23,24 +23,11 @@ Partial Class custreport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(custreport))
-        Me.btn_print = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvcust = New System.Windows.Forms.DataGridView()
         Me.btn_exit = New System.Windows.Forms.Button()
         CType(Me.dgvcust, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btn_print
-        '
-        Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.ForeColor = System.Drawing.Color.Black
-        Me.btn_print.Location = New System.Drawing.Point(311, 379)
-        Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(105, 36)
-        Me.btn_print.TabIndex = 5
-        Me.btn_print.Text = "Print"
-        Me.btn_print.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -76,7 +63,7 @@ Partial Class custreport
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(442, 378)
+        Me.btn_exit.Location = New System.Drawing.Point(563, 305)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -92,7 +79,6 @@ Partial Class custreport
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(877, 428)
         Me.Controls.Add(Me.btn_exit)
-        Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvcust)
         Me.DoubleBuffered = True
@@ -106,8 +92,6 @@ Partial Class custreport
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btn_print As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvcust As DataGridView
     Friend WithEvents btn_exit As Button

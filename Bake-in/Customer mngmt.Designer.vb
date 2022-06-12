@@ -37,7 +37,6 @@ Partial Class Customer_mnmgt
         Me.txtPhno = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgv_cust = New System.Windows.Forms.DataGridView()
-        Me.btn_update = New System.Windows.Forms.Button()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btn_insert = New System.Windows.Forms.Button()
@@ -213,17 +212,6 @@ Partial Class Customer_mnmgt
         Me.dgv_cust.Size = New System.Drawing.Size(365, 140)
         Me.dgv_cust.TabIndex = 81
         '
-        'btn_update
-        '
-        Me.btn_update.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_update.Location = New System.Drawing.Point(248, 409)
-        Me.btn_update.Name = "btn_update"
-        Me.btn_update.Size = New System.Drawing.Size(105, 36)
-        Me.btn_update.TabIndex = 84
-        Me.btn_update.Text = "Update"
-        Me.btn_update.UseVisualStyleBackColor = False
-        '
         'btn_reset
         '
         Me.btn_reset.BackColor = System.Drawing.Color.RosyBrown
@@ -251,7 +239,7 @@ Partial Class Customer_mnmgt
         '
         Me.btn_insert.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_insert.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_insert.Location = New System.Drawing.Point(137, 409)
+        Me.btn_insert.Location = New System.Drawing.Point(248, 409)
         Me.btn_insert.Name = "btn_insert"
         Me.btn_insert.Size = New System.Drawing.Size(105, 36)
         Me.btn_insert.TabIndex = 86
@@ -313,7 +301,6 @@ Partial Class Customer_mnmgt
         Me.Controls.Add(Me.dgvcust2)
         Me.Controls.Add(Me.btn_insert)
         Me.Controls.Add(Me.btnDelete)
-        Me.Controls.Add(Me.btn_update)
         Me.Controls.Add(Me.btn_reset)
         Me.Controls.Add(Me.dgv_cust)
         Me.Controls.Add(Me.Label8)
@@ -354,7 +341,6 @@ Partial Class Customer_mnmgt
     Friend WithEvents txtPhno As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents dgv_cust As DataGridView
-    Friend WithEvents btn_update As Button
     Friend WithEvents btn_reset As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents btn_insert As Button

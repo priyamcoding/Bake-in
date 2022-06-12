@@ -25,7 +25,6 @@ Partial Class expensereport
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(expensereport))
         Me.dgvexp = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btn_print = New System.Windows.Forms.Button()
         Me.btn_exit = New System.Windows.Forms.Button()
         CType(Me.dgvexp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -59,23 +58,12 @@ Partial Class expensereport
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "EXPENSE REPORT"
         '
-        'btn_print
-        '
-        Me.btn_print.BackColor = System.Drawing.Color.RosyBrown
-        Me.btn_print.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_print.Location = New System.Drawing.Point(381, 339)
-        Me.btn_print.Name = "btn_print"
-        Me.btn_print.Size = New System.Drawing.Size(105, 36)
-        Me.btn_print.TabIndex = 3
-        Me.btn_print.Text = "Print"
-        Me.btn_print.UseVisualStyleBackColor = False
-        '
         'btn_exit
         '
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(491, 339)
+        Me.btn_exit.Location = New System.Drawing.Point(540, 339)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -91,7 +79,6 @@ Partial Class expensereport
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btn_exit)
-        Me.Controls.Add(Me.btn_print)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvexp)
         Me.DoubleBuffered = True
@@ -107,6 +94,5 @@ Partial Class expensereport
 
     Friend WithEvents dgvexp As DataGridView
     Friend WithEvents Label1 As Label
-    Friend WithEvents btn_print As Button
     Friend WithEvents btn_exit As Button
 End Class
