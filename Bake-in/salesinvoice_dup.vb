@@ -73,9 +73,9 @@ Public Class salesinvoice_dup
         cmd = New OleDbCommand(sql, con)
         cmbName.DataSource = dtSal
         cmbName.ValueMember = "pname"
-        cmbName.DisplayMember = "prodID"
+        cmbName.DisplayMember = "pname"
         cmbPrice.DataSource = dtSal
-        cmbPrice.DisplayMember = "prodID"
+        cmbPrice.DisplayMember = "price"
         cmbPrice.ValueMember = "price"
         'cmbQty.DataSource = dtSal
         'cmbQty.DisplayMember = "qty"
