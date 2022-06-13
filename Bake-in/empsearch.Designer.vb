@@ -25,10 +25,10 @@ Partial Class empsearch
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(empsearch))
         Me.dgvEmpSearch = New System.Windows.Forms.DataGridView()
         Me.btnItemSearch = New System.Windows.Forms.Button()
-        Me.txtItemTitleSearch = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.cmbItemTitleSearch = New System.Windows.Forms.ComboBox()
         CType(Me.dgvEmpSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -61,14 +61,6 @@ Partial Class empsearch
         Me.btnItemSearch.Text = "Search"
         Me.btnItemSearch.UseVisualStyleBackColor = False
         '
-        'txtItemTitleSearch
-        '
-        Me.txtItemTitleSearch.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtItemTitleSearch.Location = New System.Drawing.Point(235, 84)
-        Me.txtItemTitleSearch.Name = "txtItemTitleSearch"
-        Me.txtItemTitleSearch.Size = New System.Drawing.Size(100, 22)
-        Me.txtItemTitleSearch.TabIndex = 15
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -77,9 +69,9 @@ Partial Class empsearch
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
         Me.Label2.Location = New System.Drawing.Point(92, 88)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 16)
+        Me.Label2.Size = New System.Drawing.Size(89, 16)
         Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Employee Name"
+        Me.Label2.Text = "Employee ID"
         '
         'Label1
         '
@@ -105,6 +97,14 @@ Partial Class empsearch
         Me.btnExit.Text = "EXIT"
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'cmbItemTitleSearch
+        '
+        Me.cmbItemTitleSearch.FormattingEnabled = True
+        Me.cmbItemTitleSearch.Location = New System.Drawing.Point(214, 87)
+        Me.cmbItemTitleSearch.Name = "cmbItemTitleSearch"
+        Me.cmbItemTitleSearch.Size = New System.Drawing.Size(181, 21)
+        Me.cmbItemTitleSearch.TabIndex = 19
+        '
         'empsearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -112,9 +112,9 @@ Partial Class empsearch
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(932, 492)
+        Me.Controls.Add(Me.cmbItemTitleSearch)
         Me.Controls.Add(Me.dgvEmpSearch)
         Me.Controls.Add(Me.btnItemSearch)
-        Me.Controls.Add(Me.txtItemTitleSearch)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
@@ -131,8 +131,8 @@ Partial Class empsearch
 
     Friend WithEvents dgvEmpSearch As DataGridView
     Friend WithEvents btnItemSearch As Button
-    Friend WithEvents txtItemTitleSearch As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnExit As Button
+    Friend WithEvents cmbItemTitleSearch As ComboBox
 End Class

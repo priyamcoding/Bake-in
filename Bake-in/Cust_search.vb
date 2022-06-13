@@ -53,10 +53,18 @@ Public Class Cust_search
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
+        Dim sql As String = "Select * from tb_cust"
+        daItem = New OleDbDataAdapter(sql, con)
+        dtItem = New DataTable
+        daItem.Fill(dtItem)
+        cmd = New OleDbCommand(sql, con)
+        cmbItemTitleSearch.DataSource = dtItem
+        cmbItemTitleSearch.ValueMember = "custname"
+        cmbItemTitleSearch.DisplayMember = "custID"
     End Sub
 
     Private Sub btnItemSearch_Click(sender As Object, e As EventArgs) Handles btnItemSearch.Click
-        Dim sql As String = "select * from tb_cust where custname ='" & txtItemTitleSearch.Text & "'"
+        Dim sql As String = "select * from tb_cust where custname ='" & cmbItemTitleSearch.SelectedValue.ToString & "'"
         'MsgBox(sql)
         cmd = New OleDbCommand()
         con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\maneesh\\source\\repos\\dbBakeIn.accdb")
@@ -79,6 +87,10 @@ Public Class Cust_search
         'dgvItemSearch.Columns(4).Width = 300
 
         con.Close()
+
+    End Sub
+
+    Private Sub txtItemTitleSearch_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

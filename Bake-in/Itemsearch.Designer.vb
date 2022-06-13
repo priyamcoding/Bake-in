@@ -26,9 +26,9 @@ Partial Class Itemsearch
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtItemTitleSearch = New System.Windows.Forms.TextBox()
         Me.btnItemSearch = New System.Windows.Forms.Button()
         Me.dgvItemSearch = New System.Windows.Forms.DataGridView()
+        Me.cmbItemTitleSearch = New System.Windows.Forms.ComboBox()
         CType(Me.dgvItemSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,17 +64,9 @@ Partial Class Itemsearch
         Me.Label2.ForeColor = System.Drawing.Color.Sienna
         Me.Label2.Location = New System.Drawing.Point(217, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 16)
+        Me.Label2.Size = New System.Drawing.Size(53, 16)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Item Name"
-        '
-        'txtItemTitleSearch
-        '
-        Me.txtItemTitleSearch.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtItemTitleSearch.Location = New System.Drawing.Point(312, 75)
-        Me.txtItemTitleSearch.Name = "txtItemTitleSearch"
-        Me.txtItemTitleSearch.Size = New System.Drawing.Size(100, 22)
-        Me.txtItemTitleSearch.TabIndex = 3
+        Me.Label2.Text = "Item ID"
         '
         'btnItemSearch
         '
@@ -105,6 +97,14 @@ Partial Class Itemsearch
         Me.dgvItemSearch.Size = New System.Drawing.Size(616, 256)
         Me.dgvItemSearch.TabIndex = 5
         '
+        'cmbItemTitleSearch
+        '
+        Me.cmbItemTitleSearch.FormattingEnabled = True
+        Me.cmbItemTitleSearch.Location = New System.Drawing.Point(319, 72)
+        Me.cmbItemTitleSearch.Name = "cmbItemTitleSearch"
+        Me.cmbItemTitleSearch.Size = New System.Drawing.Size(181, 21)
+        Me.cmbItemTitleSearch.TabIndex = 20
+        '
         'Itemsearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,9 +113,9 @@ Partial Class Itemsearch
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1037, 450)
+        Me.Controls.Add(Me.cmbItemTitleSearch)
         Me.Controls.Add(Me.dgvItemSearch)
         Me.Controls.Add(Me.btnItemSearch)
-        Me.Controls.Add(Me.txtItemTitleSearch)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
@@ -133,7 +133,7 @@ Partial Class Itemsearch
     Friend WithEvents btnExit As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtItemTitleSearch As TextBox
     Friend WithEvents btnItemSearch As Button
     Friend WithEvents dgvItemSearch As DataGridView
+    Friend WithEvents cmbItemTitleSearch As ComboBox
 End Class

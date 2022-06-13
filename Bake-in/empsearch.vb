@@ -45,10 +45,18 @@ Public Class empsearch
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
+        Dim sql As String = "Select * from tb_emp"
+        daItem = New OleDbDataAdapter(sql, con)
+        dtItem = New DataTable
+        daItem.Fill(dtItem)
+        cmd = New OleDbCommand(sql, con)
+        cmbItemTitleSearch.DataSource = dtItem
+        cmbItemTitleSearch.ValueMember = "ename1"
+        cmbItemTitleSearch.DisplayMember = "empID"
     End Sub
 
     Private Sub btnItemSearch_Click(sender As Object, e As EventArgs) Handles btnItemSearch.Click
-        Dim sql As String = "select * from tb_emp where ename1 ='" & txtItemTitleSearch.Text & "'"
+        Dim sql As String = "select * from tb_emp where ename1 ='" & cmbItemTitleSearch.SelectedValue.ToString & "'"
         'MsgBox(sql)
         cmd = New OleDbCommand()
         con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\maneesh\\source\\repos\\dbBakeIn.accdb")

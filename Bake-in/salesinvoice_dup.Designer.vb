@@ -29,15 +29,12 @@ Partial Class salesinvoice_dup
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgv_invoice = New System.Windows.Forms.DataGridView()
-        Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_add = New System.Windows.Forms.Button()
         Me.btn_remline = New System.Windows.Forms.Button()
         Me.btn_ClrAll = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.invoice_heading = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtQty = New System.Windows.Forms.TextBox()
         Me.txttotal = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
@@ -48,6 +45,9 @@ Partial Class salesinvoice_dup
         Me.DbBakeInDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProdDataset = New Bake_in.ProdDataset()
         Me.ProdDatasetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbPrice = New System.Windows.Forms.ComboBox()
+        Me.txtQty = New System.Windows.Forms.TextBox()
         CType(Me.dgv_invoice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DbBakeInDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DbBakeInDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,15 +100,6 @@ Partial Class salesinvoice_dup
         Me.dgv_invoice.Size = New System.Drawing.Size(322, 313)
         Me.dgv_invoice.TabIndex = 145
         '
-        'txtPrice
-        '
-        Me.txtPrice.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtPrice.Location = New System.Drawing.Point(626, 83)
-        Me.txtPrice.Multiline = True
-        Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(100, 25)
-        Me.txtPrice.TabIndex = 150
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -154,17 +145,6 @@ Partial Class salesinvoice_dup
         Me.btn_ClrAll.Text = "Clear"
         Me.btn_ClrAll.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.Sienna
-        Me.Label2.Location = New System.Drawing.Point(579, 83)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 16)
-        Me.Label2.TabIndex = 151
-        Me.Label2.Text = "Price"
-        '
         'invoice_heading
         '
         Me.invoice_heading.Dock = System.Windows.Forms.DockStyle.Top
@@ -187,15 +167,6 @@ Partial Class salesinvoice_dup
         Me.Label3.Size = New System.Drawing.Size(106, 16)
         Me.Label3.TabIndex = 153
         Me.Label3.Text = "Order Quantity"
-        '
-        'txtQty
-        '
-        Me.txtQty.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtQty.Location = New System.Drawing.Point(429, 80)
-        Me.txtQty.Multiline = True
-        Me.txtQty.Name = "txtQty"
-        Me.txtQty.Size = New System.Drawing.Size(105, 25)
-        Me.txtQty.TabIndex = 154
         '
         'txttotal
         '
@@ -272,16 +243,45 @@ Partial Class salesinvoice_dup
         Me.ProdDatasetBindingSource.DataSource = Me.ProdDataset
         Me.ProdDatasetBindingSource.Position = 0
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Sienna
+        Me.Label2.Location = New System.Drawing.Point(579, 83)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 16)
+        Me.Label2.TabIndex = 151
+        Me.Label2.Text = "Price"
+        '
+        'cmbPrice
+        '
+        Me.cmbPrice.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.cmbPrice.FormattingEnabled = True
+        Me.cmbPrice.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.cmbPrice.Location = New System.Drawing.Point(625, 74)
+        Me.cmbPrice.Name = "cmbPrice"
+        Me.cmbPrice.Size = New System.Drawing.Size(100, 25)
+        Me.cmbPrice.TabIndex = 159
+        '
+        'txtQty
+        '
+        Me.txtQty.Location = New System.Drawing.Point(438, 83)
+        Me.txtQty.Name = "txtQty"
+        Me.txtQty.Size = New System.Drawing.Size(100, 20)
+        Me.txtQty.TabIndex = 160
+        '
         'salesinvoice_dup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.txtQty)
+        Me.Controls.Add(Me.cmbPrice)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.cmbName)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txttotal)
-        Me.Controls.Add(Me.txtQty)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.invoice_heading)
         Me.Controls.Add(Me.Label2)
@@ -289,7 +289,6 @@ Partial Class salesinvoice_dup
         Me.Controls.Add(Me.btn_remline)
         Me.Controls.Add(Me.btn_add)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtPrice)
         Me.Controls.Add(Me.dgv_invoice)
         Me.Name = "salesinvoice_dup"
         Me.Text = "salesinvoice_dup"
@@ -308,15 +307,12 @@ Partial Class salesinvoice_dup
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents dgv_invoice As DataGridView
-    Friend WithEvents txtPrice As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_add As Button
     Friend WithEvents btn_remline As Button
     Friend WithEvents btn_ClrAll As Button
-    Friend WithEvents Label2 As Label
     Friend WithEvents invoice_heading As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtQty As TextBox
     Friend WithEvents txttotal As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
@@ -327,4 +323,7 @@ Partial Class salesinvoice_dup
     Friend WithEvents DbBakeInDataSetBindingSource As BindingSource
     Friend WithEvents ProdDataset As ProdDataset
     Friend WithEvents ProdDatasetBindingSource As BindingSource
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cmbPrice As ComboBox
+    Friend WithEvents txtQty As TextBox
 End Class
