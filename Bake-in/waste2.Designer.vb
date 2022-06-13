@@ -37,6 +37,7 @@ Partial Class waste2
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_insert = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.dgvWaste, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -202,13 +203,26 @@ Partial Class waste2
         Me.btn_insert.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_insert.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_insert.ForeColor = System.Drawing.Color.Black
-        Me.btn_insert.Location = New System.Drawing.Point(261, 396)
+        Me.btn_insert.Location = New System.Drawing.Point(152, 396)
         Me.btn_insert.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_insert.Name = "btn_insert"
         Me.btn_insert.Size = New System.Drawing.Size(105, 36)
         Me.btn_insert.TabIndex = 154
         Me.btn_insert.Text = "Insert"
         Me.btn_insert.UseVisualStyleBackColor = False
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnUpdate.ForeColor = System.Drawing.Color.Black
+        Me.btnUpdate.Location = New System.Drawing.Point(261, 396)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(105, 36)
+        Me.btnUpdate.TabIndex = 155
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'waste2
         '
@@ -217,6 +231,7 @@ Partial Class waste2
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(929, 516)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btn_insert)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_search)
@@ -256,4 +271,5 @@ Partial Class waste2
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_insert As Button
+    Friend WithEvents btnUpdate As Button
 End Class

@@ -46,6 +46,7 @@ Partial Class Complaint_mnmt
         Me.dgvComp2 = New System.Windows.Forms.DataGridView()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.dgvComp1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvComp2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -115,7 +116,7 @@ Partial Class Complaint_mnmt
         Me.btn_reset.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_reset.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_reset.ForeColor = System.Drawing.Color.Black
-        Me.btn_reset.Location = New System.Drawing.Point(281, 452)
+        Me.btn_reset.Location = New System.Drawing.Point(395, 452)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(105, 36)
         Me.btn_reset.TabIndex = 81
@@ -127,7 +128,7 @@ Partial Class Complaint_mnmt
         Me.btn_insert.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_insert.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_insert.ForeColor = System.Drawing.Color.Black
-        Me.btn_insert.Location = New System.Drawing.Point(151, 452)
+        Me.btn_insert.Location = New System.Drawing.Point(173, 452)
         Me.btn_insert.Name = "btn_insert"
         Me.btn_insert.Size = New System.Drawing.Size(105, 36)
         Me.btn_insert.TabIndex = 80
@@ -271,7 +272,7 @@ Partial Class Complaint_mnmt
         Me.btnDelete.BackColor = System.Drawing.Color.RosyBrown
         Me.btnDelete.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnDelete.ForeColor = System.Drawing.Color.Black
-        Me.btnDelete.Location = New System.Drawing.Point(392, 453)
+        Me.btnDelete.Location = New System.Drawing.Point(506, 452)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(105, 36)
         Me.btnDelete.TabIndex = 97
@@ -300,7 +301,7 @@ Partial Class Complaint_mnmt
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(623, 453)
+        Me.btn_exit.Location = New System.Drawing.Point(725, 453)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -313,13 +314,25 @@ Partial Class Complaint_mnmt
         Me.btn_search.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_search.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_search.ForeColor = System.Drawing.Color.Black
-        Me.btn_search.Location = New System.Drawing.Point(514, 452)
+        Me.btn_search.Location = New System.Drawing.Point(616, 453)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(105, 36)
         Me.btn_search.TabIndex = 141
         Me.btn_search.Text = "Search"
         Me.btn_search.UseVisualStyleBackColor = False
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnUpdate.ForeColor = System.Drawing.Color.Black
+        Me.btnUpdate.Location = New System.Drawing.Point(284, 452)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(105, 36)
+        Me.btnUpdate.TabIndex = 143
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'Complaint_mnmt
         '
@@ -328,6 +341,7 @@ Partial Class Complaint_mnmt
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1009, 505)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_search)
         Me.Controls.Add(Me.dgvComp2)
@@ -386,4 +400,5 @@ Partial Class Complaint_mnmt
     Friend WithEvents dgvComp2 As DataGridView
     Friend WithEvents btn_exit As Button
     Friend WithEvents btn_search As Button
+    Friend WithEvents btnUpdate As Button
 End Class

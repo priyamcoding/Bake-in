@@ -189,7 +189,7 @@ Public Class Product_Inventory
             cat =  '" & cmbCategory.SelectedItem & "' , qty = " & txtqty.Text & ", type = '" & cmbOrd.Text & "', price = " & txtLisPrc.Text & ", doc = #" & dtpDOC.Value.Date & "#,
             doe = #" & dtpDOE.Value.Date & "# , ref = '" & s & "' where prodID = " & txtProdID.Text & " "
 
-            MsgBox(sSql)
+            'MsgBox(sSql)
             cmd = New OleDbCommand()
             con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
             cmd.CommandText = sSql
@@ -209,5 +209,47 @@ Public Class Product_Inventory
         MsgBox("Record updated successfully!!!", MessageBoxIcon.Information)
         con.Close()
 
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim s As Boolean
+        If rbRef_yes.Checked = True Then
+
+            s = True
+        ElseIf rbRef_no.Checked = True Then
+            s = False
+
+        End If
+
+        Try
+            Dim sSql As String = "update tb_prod set [pname] = '" & txtProdName.Text & "' ,
+                            [cat] = '" & cmbCategory.SelectedItem & "' , [qty] = " & txtqty.Text & ", [type] = '" & cmbOrd.SelectedItem & "' , [price] = " & txtLisPrc.Text & ",
+                           [doc] = #" & dtpDOC.Value.Date & "#, 
+                           [doe] = #" & dtpDOE.Value.Date & "#, [ref] = '" & s & "' where [prodID] = " & txtProdID.Text & " "
+
+            'MsgBox(sSql)
+            cmd = New OleDbCommand()
+            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+            cmd.CommandText = sSql
+            cmd.Connection = con
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            cmd.ExecuteNonQuery()
+            daPro.SelectCommand = New OleDbCommand("select * from tb_prod")
+            daPro.SelectCommand.Connection = con
+            dtPro.Clear()
+            daPro.Fill(dtPro)
+            dgvpro.DataSource = dtPro
+            MsgBox("Record Updated successfully!!!", MessageBoxIcon.Information)
+            con.Close()
+
+
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        Finally
+            con.Dispose()
+        End Try
     End Sub
 End Class

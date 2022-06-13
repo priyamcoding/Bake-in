@@ -43,6 +43,7 @@ Partial Class Customer_mnmgt
         Me.dgvcust2 = New System.Windows.Forms.DataGridView()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
+        Me.btn_Update = New System.Windows.Forms.Button()
         CType(Me.dgv_cust, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvcust2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -239,7 +240,7 @@ Partial Class Customer_mnmgt
         '
         Me.btn_insert.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_insert.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_insert.Location = New System.Drawing.Point(248, 409)
+        Me.btn_insert.Location = New System.Drawing.Point(137, 409)
         Me.btn_insert.Name = "btn_insert"
         Me.btn_insert.Size = New System.Drawing.Size(105, 36)
         Me.btn_insert.TabIndex = 86
@@ -289,6 +290,17 @@ Partial Class Customer_mnmgt
         Me.btn_search.Text = "Search"
         Me.btn_search.UseVisualStyleBackColor = False
         '
+        'btn_Update
+        '
+        Me.btn_Update.BackColor = System.Drawing.Color.RosyBrown
+        Me.btn_Update.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btn_Update.Location = New System.Drawing.Point(248, 409)
+        Me.btn_Update.Name = "btn_Update"
+        Me.btn_Update.Size = New System.Drawing.Size(105, 36)
+        Me.btn_Update.TabIndex = 143
+        Me.btn_Update.Text = "Update"
+        Me.btn_Update.UseVisualStyleBackColor = False
+        '
         'Customer_mnmgt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -296,6 +308,7 @@ Partial Class Customer_mnmgt
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1144, 551)
+        Me.Controls.Add(Me.btn_Update)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_search)
         Me.Controls.Add(Me.dgvcust2)
@@ -347,4 +360,5 @@ Partial Class Customer_mnmgt
     Friend WithEvents dgvcust2 As DataGridView
     Friend WithEvents btn_exit As Button
     Friend WithEvents btn_search As Button
+    Friend WithEvents btn_Update As Button
 End Class

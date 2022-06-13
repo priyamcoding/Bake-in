@@ -140,5 +140,36 @@ Public Class waste2
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_insert.Click
 
     End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Try
+            Dim sSql As String = "update tb_waste set [pname] = '" & txtProNam.Text & "' , [qty] = " & txtQuan.Text & ",  
+                            [DOD] = #" & dtpDOD.Value.Date & "# where [prodID] = " & txtProID.Text & " "
+
+            MsgBox(sSql)
+            cmd = New OleDbCommand()
+            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+            cmd.CommandText = sSql
+            cmd.Connection = con
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            cmd.ExecuteNonQuery()
+            daWaste.SelectCommand = New OleDbCommand("select * from tb_waste")
+            daWaste.SelectCommand.Connection = con
+            dtWaste.Clear()
+            daWaste.Fill(dtWaste)
+            dgvWaste.DataSource = dtWaste
+            MsgBox("Record Updated successfully!!!", MessageBoxIcon.Information)
+            con.Close()
+
+
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        Finally
+            con.Dispose()
+        End Try
+    End Sub
 End Class
 

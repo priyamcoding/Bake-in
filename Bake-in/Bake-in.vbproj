@@ -201,6 +201,16 @@
     <Compile Include="prod_search.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="salesinvoice2.Designer.vb">
+      <DependentUpon>salesinvoice2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salesinvoice2.vb" />
+    <Compile Include="salesinvoice_dup.Designer.vb">
+      <DependentUpon>salesinvoice_dup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salesinvoice_dup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="salesreport.Designer.vb">
       <DependentUpon>salesreport.vb</DependentUpon>
     </Compile>
@@ -342,6 +352,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="bakein_menu.resx">
       <DependentUpon>bakein_menu.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -360,6 +371,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="prod_search.resx">
       <DependentUpon>prod_search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesinvoice2.resx">
+      <DependentUpon>salesinvoice2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesinvoice_dup.resx">
+      <DependentUpon>salesinvoice_dup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="salesreport.resx">
       <DependentUpon>salesreport.vb</DependentUpon>

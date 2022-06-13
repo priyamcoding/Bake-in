@@ -47,6 +47,7 @@ Partial Class Item_inventory
         Me.btn_search = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtItemID = New System.Windows.Forms.TextBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.dgvitem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -213,7 +214,7 @@ Partial Class Item_inventory
         Me.btn_save.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_save.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_save.ForeColor = System.Drawing.Color.Black
-        Me.btn_save.Location = New System.Drawing.Point(201, 391)
+        Me.btn_save.Location = New System.Drawing.Point(89, 391)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(105, 36)
         Me.btn_save.TabIndex = 41
@@ -323,6 +324,18 @@ Partial Class Item_inventory
         Me.txtItemID.Size = New System.Drawing.Size(145, 22)
         Me.txtItemID.TabIndex = 32
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnUpdate.ForeColor = System.Drawing.Color.Black
+        Me.btnUpdate.Location = New System.Drawing.Point(200, 391)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(105, 36)
+        Me.btnUpdate.TabIndex = 143
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
+        '
         'Item_inventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -330,6 +343,7 @@ Partial Class Item_inventory
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(995, 562)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_search)
         Me.Controls.Add(Me.txtQty)
@@ -389,4 +403,5 @@ Partial Class Item_inventory
     Friend WithEvents btn_search As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtItemID As TextBox
+    Friend WithEvents btnUpdate As Button
 End Class

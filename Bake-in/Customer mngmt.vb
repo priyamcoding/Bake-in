@@ -71,7 +71,7 @@ Public Class Customer_mnmgt
 
         'For Dgv1
         Dim sql As String = "select custID1, custname1, gender1, dob1, phno1, add1 from tb_order"
-        MsgBox(sql)
+
         daCust = New OleDbDataAdapter(sql, con)
         'Dim ds As New DataSet
         'daCust.Fill(ds, "tb_order")
@@ -86,7 +86,7 @@ Public Class Customer_mnmgt
 
         'For Dgv2
         Dim sql2 As String = "SELECT * FROM tb_cust"
-        MsgBox(sql2)
+        'MsgBox(sql2)
         daCust = New OleDb.OleDbDataAdapter(sql2, con)
         dtCust = New DataTable
         daCust.Fill(dtCust)
@@ -198,7 +198,7 @@ Public Class Customer_mnmgt
 
 
         Dim sql3 As String = "insert into tb_cust values(" & txtcustID.Text & ", '" & txtCustName.Text & "', '" & cmbGender.SelectedItem & "', #" & dtpDOB.Value.Date & "#, " & Double.Parse(txtPhno.Text) & ", '" & txtAdd.Text & "')"
-        MessageBox.Show(sql3)
+        'MessageBox.Show(sql3)
         cmd = New OleDbCommand
         con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\maneesh\\source\\repos\\dbBakeIn.accdb")
         cmd.CommandText = sql3
@@ -239,8 +239,33 @@ Public Class Customer_mnmgt
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_Update.Click
+        Try
+            Dim sSql As String = "update tb_cust set [custname] = '" & txtCustName.Text & "', [gender] = '" & cmbGender.SelectedItem & "', [dob] = #" & dtpDOB.Value.Date & "#, [Phone] = " & Double.Parse(txtPhno.Text) & ", [Address] = '" & txtAdd.Text & "' where [custID] = " & txtcustID.Text & " "
+
+            'MsgBox(sSql)
+            cmd = New OleDbCommand()
+            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+            cmd.CommandText = sSql
+            cmd.Connection = con
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            cmd.ExecuteNonQuery()
+            daCust.SelectCommand = New OleDbCommand("select * from tb_cust")
+            daCust.SelectCommand.Connection = con
+            dtCust.Clear()
+            daCust.Fill(dtCust)
+            dgvcust2.DataSource = dtCust
+            MsgBox("Record Updated successfully!!!", MessageBoxIcon.Information)
+            con.Close()
 
 
-
-
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        Finally
+            con.Dispose()
+        End Try
+    End Sub
 End Class

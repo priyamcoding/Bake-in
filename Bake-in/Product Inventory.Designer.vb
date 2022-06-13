@@ -50,6 +50,7 @@ Partial Class Product_Inventory
         Me.btn_update = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtProdID = New System.Windows.Forms.TextBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.dgvpro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,7 +71,7 @@ Partial Class Product_Inventory
         Me.btn_reset.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_reset.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_reset.ForeColor = System.Drawing.Color.Black
-        Me.btn_reset.Location = New System.Drawing.Point(262, 367)
+        Me.btn_reset.Location = New System.Drawing.Point(292, 367)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(109, 37)
         Me.btn_reset.TabIndex = 61
@@ -82,7 +83,7 @@ Partial Class Product_Inventory
         Me.btn_insert.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_insert.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_insert.ForeColor = System.Drawing.Color.Black
-        Me.btn_insert.Location = New System.Drawing.Point(135, 367)
+        Me.btn_insert.Location = New System.Drawing.Point(53, 367)
         Me.btn_insert.Name = "btn_insert"
         Me.btn_insert.Size = New System.Drawing.Size(117, 37)
         Me.btn_insert.TabIndex = 60
@@ -276,7 +277,7 @@ Partial Class Product_Inventory
         '
         Me.btn_delete.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_delete.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_delete.Location = New System.Drawing.Point(486, 365)
+        Me.btn_delete.Location = New System.Drawing.Point(516, 365)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(113, 37)
         Me.btn_delete.TabIndex = 73
@@ -308,7 +309,7 @@ Partial Class Product_Inventory
         Me.btn_exit.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_exit.ForeColor = System.Drawing.Color.Black
-        Me.btn_exit.Location = New System.Drawing.Point(713, 367)
+        Me.btn_exit.Location = New System.Drawing.Point(743, 367)
         Me.btn_exit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(105, 36)
@@ -321,7 +322,7 @@ Partial Class Product_Inventory
         Me.btn_search.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_search.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_search.ForeColor = System.Drawing.Color.Black
-        Me.btn_search.Location = New System.Drawing.Point(604, 366)
+        Me.btn_search.Location = New System.Drawing.Point(634, 366)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(105, 36)
@@ -334,7 +335,7 @@ Partial Class Product_Inventory
         Me.btn_update.BackColor = System.Drawing.Color.RosyBrown
         Me.btn_update.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_update.ForeColor = System.Drawing.Color.Black
-        Me.btn_update.Location = New System.Drawing.Point(376, 366)
+        Me.btn_update.Location = New System.Drawing.Point(406, 366)
         Me.btn_update.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(105, 36)
@@ -363,6 +364,18 @@ Partial Class Product_Inventory
         Me.txtProdID.Size = New System.Drawing.Size(145, 22)
         Me.txtProdID.TabIndex = 51
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnUpdate.ForeColor = System.Drawing.Color.Black
+        Me.btnUpdate.Location = New System.Drawing.Point(169, 367)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(117, 37)
+        Me.btnUpdate.TabIndex = 144
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
+        '
         'Product_Inventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -370,6 +383,7 @@ Partial Class Product_Inventory
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1016, 542)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btn_update)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_search)
@@ -435,4 +449,5 @@ Partial Class Product_Inventory
     Friend WithEvents btn_update As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtProdID As TextBox
+    Friend WithEvents btnUpdate As Button
 End Class

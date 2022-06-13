@@ -168,4 +168,44 @@ Public Class Item_inventory
         Me.Close()
         Dashboard.Show()
     End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim s As Boolean
+        If rbRefYes.Checked = True Then
+            s = True
+        ElseIf rbRefNo.Checked = True Then
+            s = False
+        End If
+
+        Try
+            Dim sSql As String = "update tb_item set [iname] = '" & txtName.Text & "', [cat] = '" & cmbCat.SelectedItem & "', [Qty] = " & txtQty.Text & ", 
+                          [price] = " & txtPrice.Text & ", [ref] = '" & s & "', [DOA] = #" & dtpDOA.Value.Date & "#, 
+                            [DOE] = #" & dtpDOE.Value.Date & "# where [itemID] = " & txtItemID.Text & " "
+
+
+            MsgBox(sSql)
+            cmd = New OleDbCommand()
+            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+            cmd.CommandText = sSql
+            cmd.Connection = con
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            cmd.ExecuteNonQuery()
+            daOrd.SelectCommand = New OleDbCommand("select * from tb_item")
+            daOrd.SelectCommand.Connection = con
+            dtOrd.Clear()
+            daOrd.Fill(dtOrd)
+            dgvitem.DataSource = dtOrd
+            MsgBox("Record Updated successfully!!!", MessageBoxIcon.Information)
+            con.Close()
+
+
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        Finally
+            con.Dispose()
+        End Try
+    End Sub
 End Class

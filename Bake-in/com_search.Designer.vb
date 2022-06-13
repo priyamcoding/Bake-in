@@ -25,10 +25,10 @@ Partial Class com_search
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(com_search))
         Me.dgvItemSearch = New System.Windows.Forms.DataGridView()
         Me.btnItemSearch = New System.Windows.Forms.Button()
-        Me.txtItemTitleSearch = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.cmbItemTitleSearch = New System.Windows.Forms.ComboBox()
         CType(Me.dgvItemSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,14 +60,6 @@ Partial Class com_search
         Me.btnItemSearch.TabIndex = 16
         Me.btnItemSearch.Text = "Search"
         Me.btnItemSearch.UseVisualStyleBackColor = False
-        '
-        'txtItemTitleSearch
-        '
-        Me.txtItemTitleSearch.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtItemTitleSearch.Location = New System.Drawing.Point(233, 91)
-        Me.txtItemTitleSearch.Name = "txtItemTitleSearch"
-        Me.txtItemTitleSearch.Size = New System.Drawing.Size(100, 22)
-        Me.txtItemTitleSearch.TabIndex = 15
         '
         'Label2
         '
@@ -105,6 +97,14 @@ Partial Class com_search
         Me.btnExit.Text = "EXIT"
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'cmbItemTitleSearch
+        '
+        Me.cmbItemTitleSearch.FormattingEnabled = True
+        Me.cmbItemTitleSearch.Location = New System.Drawing.Point(240, 89)
+        Me.cmbItemTitleSearch.Name = "cmbItemTitleSearch"
+        Me.cmbItemTitleSearch.Size = New System.Drawing.Size(181, 21)
+        Me.cmbItemTitleSearch.TabIndex = 18
+        '
         'com_search
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -112,9 +112,9 @@ Partial Class com_search
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(876, 475)
+        Me.Controls.Add(Me.cmbItemTitleSearch)
         Me.Controls.Add(Me.dgvItemSearch)
         Me.Controls.Add(Me.btnItemSearch)
-        Me.Controls.Add(Me.txtItemTitleSearch)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
@@ -131,8 +131,8 @@ Partial Class com_search
 
     Friend WithEvents dgvItemSearch As DataGridView
     Friend WithEvents btnItemSearch As Button
-    Friend WithEvents txtItemTitleSearch As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnExit As Button
+    Friend WithEvents cmbItemTitleSearch As ComboBox
 End Class

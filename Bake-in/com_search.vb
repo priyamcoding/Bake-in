@@ -45,10 +45,19 @@ Public Class com_search
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
+        Dim sql As String = "Select * from tb_compl"
+        daItem = New OleDbDataAdapter(sql, con)
+        dtItem = New DataTable
+        daItem.Fill(dtItem)
+        cmd = New OleDbCommand(sql, con)
+        cmbItemTitleSearch.DataSource = dtItem
+        cmbItemTitleSearch.ValueMember = "orderID"
+        cmbItemTitleSearch.DisplayMember = "orderID"
+        'cmbItemTitleSearch.DisplayMember = 
     End Sub
 
     Private Sub btnItemSearch_Click(sender As Object, e As EventArgs) Handles btnItemSearch.Click
-        Dim sql As String = "select * from tb_compl where orderID =" & txtItemTitleSearch.Text & ""
+        Dim sql As String = "select * from tb_compl where orderID =" & cmbItemTitleSearch.SelectedValue.ToString & " "
         MsgBox(sql)
         cmd = New OleDbCommand()
         con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\maneesh\\source\\repos\\dbBakeIn.accdb")
@@ -71,6 +80,10 @@ Public Class com_search
         'dgvItemSearch.Columns(4).Width = 300
 
         con.Close()
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbItemTitleSearch.SelectedIndexChanged
 
     End Sub
 End Class

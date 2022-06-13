@@ -1,5 +1,5 @@
 ﻿Imports System.Data.OleDb
-Public Class sales_invoice
+Public Class salesinvoice_dup
     Dim con As New OleDbConnection
     Dim daSal As New OleDbDataAdapter
     Dim cmd As OleDbCommand
@@ -9,7 +9,7 @@ Public Class sales_invoice
     Dim receiptID As Integer = 1
     Dim dr As OleDbDataReader
 
-    Private Sub sales_invoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub sales_invoice_dup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'For DataGridView1 Style
         dgv_invoice.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
@@ -66,8 +66,8 @@ Public Class sales_invoice
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
-        Dim sql As String = "select * from tb_prod"
-        daSal = New OleDb.OleDbDataAdapter(sql, con)
+        Dim sql As String = "Select prodID, pname, price from tb_prod"
+        daSal = New OleDbDataAdapter(sql, con)
         dtSal = New DataTable
         daSal.Fill(dtSal)
         cmd = New OleDbCommand(sql, con)
@@ -81,9 +81,13 @@ Public Class sales_invoice
         dr.Read()
 
         'for text box
+        'cmbName.Text = dr("pname")
         'txtQty.Text = dr("qty")
+
         txtPrice.Text = dr("price")
 
+
+        'cmd.ExecuteNonQuery()
         'dgv_prod.DataSource = dtSal
         con.Close()
     End Sub
@@ -104,7 +108,7 @@ Public Class sales_invoice
         Dim Qty As Decimal = Decimal.Parse(txtQty.Text)
         Dim price As Decimal = Decimal.Parse(txtPrice.Text)
         Dim sum = Qty * price
-        dgv_invoice.Rows.Add(cmbName.SelectedItem, Qty, price, sum)
+        dgv_invoice.Rows.Add(cmbName.SelectedValue, Qty, price, sum)
         itemnumber += 1
 
         Calculate_invoice_total()
@@ -152,4 +156,33 @@ Public Class sales_invoice
 
     End Sub
 
+    Private Sub cmbName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbName.SelectedIndexChanged
+        Dim connString As String
+        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\maneesh\\source\\repos\\dbBakeIn.accdb"
+        con = New OleDbConnection
+        con.ConnectionString = connString
+        If con.State = ConnectionState.Closed Then
+            con.Open()
+        End If
+        'Dim sql As String = "Select prodID, pname, price from tb_prod"
+        ''daSal = New OleDbDataAdapter(sql, con)
+        ''dtSal = New DataTable
+        'daSal.Fill(dtSal)
+        'cmd = New OleDbCommand(sql, con)
+        'cmbName.DataSource = dtSal
+        'cmbName.ValueMember = "prodID"
+        'cmbName.DisplayMember = "pname"
+
+
+        'Dim sql3 As String
+        'sql3 = " Select price from tb_prod where pname = '" & cmbName.SelectedValue & "' "
+        'MsgBox(sql3)
+        'cmd = New OleDbCommand(sql3, con)
+        'cmd.ExecuteNonQuery()
+
+        If cmbName.SelectedItem.ToString() = "Apple Pie" Then
+            MsgBox("success")
+            txtPrice.Text = "100"
+        End If
+    End Sub
 End Class

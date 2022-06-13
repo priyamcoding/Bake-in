@@ -200,11 +200,64 @@ Public Class Complaint_mnmt
         Dashboard.Show()
     End Sub
 
-    Private Sub dgvComp2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvComp2.CellContentClick
 
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnUpdate.Click
+
+        Dim s As Boolean
+        If rbCRyes.Checked = True Then
+            s = True
+        ElseIf rbCRno.Checked = True Then
+            s = False
+        End If
+
+        Try
+            Dim sSql As String = "update tb_compl set [custID] = " & txtCustID.Text & ", [Phone] = " & Double.Parse(txtPhno.Text) & ", [dop] = #" & dtpDOO.Value.Date & "#, [ComplRes] = '" & s & "', [Address] = '" & txtAdd.Text & "', [desc] = '" & txtDesc.Text & "' where [orderID] = " & txtOrderID.Text & " "
+
+
+            MsgBox(sSql)
+            cmd = New OleDbCommand()
+            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\maneesh\source\repos\dbBakeIn.accdb")
+            cmd.CommandText = sSql
+            cmd.Connection = con
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            cmd.ExecuteNonQuery()
+            daCust.SelectCommand = New OleDbCommand("select * from tb_compl")
+            daCust.SelectCommand.Connection = con
+            dtCust.Clear()
+            daCust.Fill(dtCust)
+            dgvComp2.DataSource = dtCust
+            MsgBox("Record Updated successfully!!!", MessageBoxIcon.Information)
+            con.Close()
+
+
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        Finally
+            con.Dispose()
+        End Try
     End Sub
 
-    Private Sub dgvComp1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvComp1.CellContentClick
+    Private Sub dgvComp2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvComp2.CellClick
+        Dim selectedGR As DataGridViewRow
+        selectedGR = dgvComp2.Rows(e.RowIndex)
+        txtOrderID.Text = selectedGR.Cells(0).Value
+        txtCustID.Text = selectedGR.Cells(1).Value
+        txtPhno.Text = selectedGR.Cells(2).Value
+        dtpDOO.Text = selectedGR.Cells(3).Value
 
+        If selectedGR.Cells(4).Value = "True" Then
+            rbCRyes.Checked = True
+
+        Else
+            rbCRno.Checked = True
+
+        End If
+
+        txtAdd.Text = selectedGR.Cells(5).Value
+        txtDesc.Text = selectedGR.Cells(6).Value
     End Sub
 End Class
